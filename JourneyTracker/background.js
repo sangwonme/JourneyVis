@@ -22,5 +22,6 @@ chrome.webNavigation.onCommitted.addListener(
     },
     {urls: [
         "https://scholar.google.com/*",
+        "https://scholar.google.co.kr/*"
     ]}
 );

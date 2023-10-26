@@ -5,9 +5,13 @@
   "description": "My first Chrome extension",
   "permissions": [
     "webRequest",
-    "webNavigation"
+    "webNavigation",
+    "activeTab"
   ],
-  "host_permissions": [ "https://scholar.google.com/*"],
+  "host_permissions": [ 
+    "https://scholar.google.com/*",
+    "https://scholar.google.co.kr/*"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -18,5 +22,14 @@
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "content_scripts": [
+    {
+        "matches": [
+            "https://scholar.google.com/*",
+            "https://scholar.google.co.kr/*"
+        ],
+        "js": ["content.js"]
+    }
+  ]
 }
