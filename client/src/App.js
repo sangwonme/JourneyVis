@@ -3,6 +3,7 @@ import Tree from "react-d3-tree";
 import orgChartJson from "./data/treeData.json";
 import { useCenteredTree } from "./helpers";
 import "./App.css";
+import TreeChart from "./components/TreeChart";
 
 const containerStyles = {
   width: "100vw",
@@ -44,17 +45,8 @@ export default function App() {
   const foreignObjectProps = { width: 200, height: nodeSize.y, x:-100};
 
   return (
-    <div style={containerStyles} ref={containerRef}>
-      <Tree
-        data={orgChartJson}
-        translate={translate}
-        nodeSize={nodeSize}
-        renderCustomNodeElement={(rd3tProps) =>
-          renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
-        }
-        pathFunc={(linkData) => customPathFunction(linkData, 'horizontal')}
-        orientation="horizontal"
-      />
+    <div>
+      <TreeChart/>
     </div>
   );
 }
