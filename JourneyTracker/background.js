@@ -1,27 +1,41 @@
 chrome.webNavigation.onCommitted.addListener(
     function(details) {
-        // Check if the URL is a Google Scholar search query
         if (details.url.includes("https://scholar.google.")) {
             let url = new URL(details.url);
-            let searchTerm = url.searchParams.get("q");
-            let searchYearStart = url.searchParams.get("as_ylo");
-            let searchYearEnd = url.searchParams.get("as_yhi");
-            if (searchTerm) {
-                console.log("Google Scholar Search Term:", searchTerm);
-            }
-            if (searchYearEnd) {
-                console.log("Google Scholar Search Year:", searchYearStart + "~" + searchYearEnd);
-            }
-            else if (searchYearStart) {
-                console.log("Google Scholar Search Year:", searchYearStart);
-            }
+            let query = url.searchParams.get("q");
+            let yearStart = url.searchParams.get("as_ylo");
+            let yearEnd = url.searchParams.get("as_yhi");
+            let citedBy = url.searchParams.get("cites");
+            let cluster = url.searchParams.get("cluster");
+            let authorID = url.searchParams.get("user");
 
-            // TODO : save to DB
+            if(query || citedBy || authorID){
+                // Store data in chrome local storage
+                chrome.storage.local.get({ searchLogs: [] }, function (result) {
+                    let searchLogs = result.searchLogs;
+                    let searchAction = {
+                        logtype: "action",
+                        title: '',
+                        query: query,
+                        yearStart: yearStart,
+                        yearEnd: yearEnd,
+                        citedBy: citedBy,
+                        cluster: cluster,
+                        authorID: authorID,
+                        url: details.url,
+                        timestamp: new Date().toISOString()
+                    };
+                    console.log(searchLogs)
+                    searchLogs.push(searchAction);
+                    chrome.storage.local.set({ searchLogs: searchLogs });
+                    console.log(searchAction)
+                });
+            }
 
         }
     },
     {urls: [
-        "https://scholar.google.com/*",
+        "https://scholar.google.com/*", 
         "https://scholar.google.co.kr/*"
     ]}
 );

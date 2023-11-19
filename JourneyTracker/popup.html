@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Request Log</title>
+    <title>Export Data</title>
     <style>
         body {
-            width: 400px;
             font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        button {
+            background-color: #96a096;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #resetBtn:hover {
+            background-color: rgb(173, 38, 38);
+        }
+        #exportBtn:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h2>Recent HTTP Requests:</h2>
-    <ul id="logList"></ul>
+    <button id="resetBtn">Reset</button>
+    <button id="exportBtn">Export CSV</button>
+    <script src="popup.js"></script>
 </body>
 </html>
