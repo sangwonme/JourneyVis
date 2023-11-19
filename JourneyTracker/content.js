@@ -6,12 +6,16 @@ const authorsearchTitle = 'td.gsc_a_t > a'
 document.addEventListener('click', function(event) {
   let clickedElement = event.target;
 
-  if (clickedElement.tagName === 'A') {
+  if (clickedElement.tagName === 'A' || clickedElement.tagName === 'B') {
       event.preventDefault();
-      console.log(clickedElement);
 
-      console.log(clickedElement.closest(searchContainerTag))
-      console.log(clickedElement.closest(authorsearchContainerTag))
+      let href = ''
+      if (clickedElement.tagName === 'A'){
+        href = clickedElement.href;
+      }
+      else{
+        href = clickedElement.closest('a').href
+      }
 
       let titleText = ''
       if(clickedElement.closest(searchContainerTag)){
@@ -46,7 +50,7 @@ document.addEventListener('click', function(event) {
       }
 
       setTimeout(function() {
-          window.location.href = clickedElement.href;
+          window.location.href = href;
       }, 500); // Delay in milliseconds
   }
 });
