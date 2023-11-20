@@ -15,10 +15,31 @@ const ActionNode = ({
   return (
   <g>
     <foreignObject {...foreignObjectProps}>
-      <div id={`id${nodeDatum.name}`} className="nodeContainer" onClick={onClickNode}>
-        <h3>{nodeDatum.name}</h3>
+      <div id={`id${nodeDatum.name}`} className="nodeContainer" >
+
+        <div className="actionNode" onClick={onClickNode}>
+          <h3>{nodeDatum.name}</h3>
+        </div>
+
+
+        <div className="triangle"></div>
         <div className="paperList">
-          hi
+          <p>Query blah blah blah blah blah blah blah blah</p>
+          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
+            backgroundColor
+          </p>
+          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
+            backgroundColor
+          </p>
+          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
+            backgroundColor
+          </p>
+          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
+            backgroundColor
+          </p>
+          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
+            backgroundColor
+          </p>
         </div>
       </div>
     </foreignObject>
