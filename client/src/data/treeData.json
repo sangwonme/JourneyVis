@@ -1,134 +1,121 @@
 [
   {
-  "name": "CEO",
-  "children": [
-    {
-      "name": "Manager",
-      "attributes": {
-        "department": "Production"
-      },
+      "name": 1,
       "children": [
-        {
-          "name": "Foreman",
-          "attributes": {
-            "department": "Fabrication"
-          },
-          "children": [
-            {
-              "name": "Workers"
-            }
-          ]
-        },
-        {
-          "name": "Foreman",
-          "attributes": {
-            "department": "Assembly"
-          },
-          "children": [
-            {
-              "name": "Workers"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Manager",
-      "attributes": {
-        "department": "Marketing"
-      },
+          {
+              "name": 3,
+              "children": [],
+              "attributes": {}
+          }
+      ],
+      "attributes": {}
+  },
+  {
+      "name": 7,
       "children": [
-        {
-          "name": "Sales Officer",
-          "attributes": {
-            "department": "A"
-          },
-          "children": [
-            {
-              "name": "Salespeople"
-            }
-          ]
-        },
-        {
-          "name": "Sales Officer",
-          "attributes": {
-            "department": "B"
-          },
-          "children": [
-            {
-              "name": "Salespeople"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-},
-{
-  "name": "CTO",
-  "children": [
-    {
-      "name": "Manager",
-      "attributes": {
-        "department": "Production"
-      },
+          {
+              "name": 10,
+              "children": [
+                  {
+                      "name": 12,
+                      "children": [],
+                      "attributes": {}
+                  }
+              ],
+              "attributes": {}
+          }
+      ],
+      "attributes": {}
+  },
+  {
+      "name": 14,
       "children": [
-        {
-          "name": "Foreman",
-          "attributes": {
-            "department": "Fabrication"
+          {
+              "name": 16,
+              "children": [],
+              "attributes": {}
           },
-          "children": [
-            {
-              "name": "Workers"
-            }
-          ]
-        },
-        {
-          "name": "Foreman",
-          "attributes": {
-            "department": "Assembly"
-          },
-          "children": [
-            {
-              "name": "Workers"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Manager",
-      "attributes": {
-        "department": "Marketing"
-      },
+          {
+              "name": 17,
+              "children": [
+                  {
+                      "name": 18,
+                      "children": [
+                          {
+                              "name": 19,
+                              "children": [
+                                  {
+                                      "name": 20,
+                                      "children": [
+                                          {
+                                              "name": 22,
+                                              "children": [],
+                                              "attributes": {}
+                                          },
+                                          {
+                                              "name": 23,
+                                              "children": [],
+                                              "attributes": {}
+                                          },
+                                          {
+                                              "name": 24,
+                                              "children": [
+                                                  {
+                                                      "name": 28,
+                                                      "children": [
+                                                          {
+                                                              "name": 29,
+                                                              "children": [
+                                                                  {
+                                                                      "name": 34,
+                                                                      "children": [
+                                                                          {
+                                                                              "name": 36,
+                                                                              "children": [],
+                                                                              "attributes": {}
+                                                                          }
+                                                                      ],
+                                                                      "attributes": {}
+                                                                  }
+                                                              ],
+                                                              "attributes": {}
+                                                          }
+                                                      ],
+                                                      "attributes": {}
+                                                  }
+                                              ],
+                                              "attributes": {}
+                                          }
+                                      ],
+                                      "attributes": {}
+                                  }
+                              ],
+                              "attributes": {}
+                          }
+                      ],
+                      "attributes": {}
+                  }
+              ],
+              "attributes": {}
+          }
+      ],
+      "attributes": {}
+  },
+  {
+      "name": 39,
       "children": [
-        {
-          "name": "Sales Officer",
-          "attributes": {
-            "department": "A"
-          },
-          "children": [
-            {
-              "name": "Salespeople"
-            }
-          ]
-        },
-        {
-          "name": "Sales Officer",
-          "attributes": {
-            "department": "B"
-          },
-          "children": [
-            {
-              "name": "Salespeople"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-
-
+          {
+              "name": 41,
+              "children": [
+                  {
+                      "name": 42,
+                      "children": [],
+                      "attributes": {}
+                  }
+              ],
+              "attributes": {}
+          }
+      ],
+      "attributes": {}
+  }
 ]

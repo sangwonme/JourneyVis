@@ -1,0 +1,22 @@
+,logtype,title,query,startYear,endYear,citedBy,authorID,cluster,url,Timestamp,id,searched_papers,parent,children,Timestamp_end
+0,action,,early intervention,,,,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=early+intervention&oq=,2023-11-19T05:46:27.589Z,1,"[2, 5, 6, 44, 45, 46, 47, 48, 49]",,[3],2023-11-19T06:37:46.974Z
+2,action,,,,,6864630954541468524,,,"https://scholar.google.co.kr/scholar?cites=6864630954541468524&as_sdt=2005&sciodt=0,5&hl=ko",2023-11-19T05:46:43.763Z,3,[4],1,[],2023-11-19T05:46:53.141Z
+6,action,,early intervention language learning,,,,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=early+intervention+language+learning&btnG=&oq=early+intervention,2023-11-19T05:49:34.763Z,7,"[8, 9]",,[10],2023-11-19T05:54:45.771Z
+9,action,,,,,17079930752446188308,,,"https://scholar.google.co.kr/scholar?cites=17079930752446188308&as_sdt=2005&sciodt=0,5&hl=ko",2023-11-19T05:54:49.933Z,10,[11],7,[12],2023-11-19T05:54:49.933Z
+11,action,,,,,9724932194597403639,,,"https://scholar.google.co.kr/scholar?cites=9724932194597403639&as_sdt=2005&sciodt=0,5&hl=ko",2023-11-19T05:54:54.826Z,12,[13],10,[],2023-11-19T05:54:54.826Z
+13,action,,speech recognition,,,,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=speech+recognition&btnG=,2023-11-19T05:55:23.330Z,14,[15],,"[16, 17]",2023-11-19T05:56:34.054Z
+15,action,,,,,5321848940423579623,,,"https://scholar.google.co.kr/scholar?cites=5321848940423579623&as_sdt=2005&sciodt=0,5&hl=ko",2023-11-19T05:55:40.491Z,16,[],14,[],2023-11-19T05:55:40.491Z
+16,action,,speech recognition,2019.0,,,,,"https://scholar.google.co.kr/scholar?as_ylo=2019&q=speech+recognition&hl=ko&as_sdt=0,5",2023-11-19T05:56:54.607Z,17,[],14,[18],2023-11-19T05:56:54.607Z
+17,action,,ASR,2019.0,,,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2019&q=ASR&btnG=,2023-11-19T05:57:03.936Z,18,[],17,[19],2023-11-19T05:57:03.936Z
+18,action,,ASR,2022.0,,,,,"https://scholar.google.co.kr/scholar?as_ylo=2022&q=ASR&hl=ko&as_sdt=0,5",2023-11-19T05:57:10.460Z,19,[],18,[20],2023-11-19T05:57:10.460Z
+19,action,,automatic speech recognition,2022.0,,,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2022&q=automatic+speech+recognition&btnG=&oq=automatic+sp,2023-11-19T05:57:16.989Z,20,[21],19,"[22, 23, 24]",2023-11-19T05:57:35.574Z
+21,action,,,,,17752285616737220261,,,"https://scholar.google.co.kr/scholar?cites=17752285616737220261&as_sdt=2005&sciodt=0,5&hl=ko",2023-11-19T05:57:26.983Z,22,[],20,[],2023-11-19T05:57:26.983Z
+22,action,,,,,,OkngbkkAAAAJ,,https://scholar.google.co.kr/citations?user=OkngbkkAAAAJ&hl=ko&oi=sra,2023-11-19T05:57:31.140Z,23,[],20,[],2023-11-19T05:57:31.140Z
+23,action,,,,,,EilVnKwAAAAJ,,https://scholar.google.co.kr/citations?user=EilVnKwAAAAJ&hl=ko&oi=sra,2023-11-19T05:57:38.089Z,24,"[25, 26, 27]",20,[28],2023-11-19T05:57:53.661Z
+27,action,,,,,14002861277903846410,,,https://scholar.google.co.kr/scholar?oi=bibs&hl=ko&cites=14002861277903846410,2023-11-19T05:57:55.477Z,28,[],24,[29],2023-11-19T05:57:55.477Z
+28,action,,child,,,14002861277903846410,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=14002861277903846410&scipsc=1&q=child&btnG=,2023-11-19T05:58:04.049Z,29,"[30, 31, 32, 33]",28,[34],2023-11-19T05:58:56.250Z
+33,action,,korean,,,14002861277903846410,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=14002861277903846410&scipsc=1&q=korean&btnG=,2023-11-19T05:58:58.879Z,34,[35],29,[36],2023-11-19T05:59:05.747Z
+35,action,,,,,2087910909039998794,,,"https://scholar.google.co.kr/scholar?cites=2087910909039998794&as_sdt=2005&sciodt=0,5&hl=ko",2023-11-19T05:59:07.859Z,36,"[37, 38]",34,[],2023-11-19T05:59:28.536Z
+38,action,,video understanding multimodal,,,,,,https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=video+understanding+multimodal&oq=,2023-11-19T05:59:35.191Z,39,[40],,[41],2023-11-19T05:59:39.506Z
+40,action,,,,,3097734008368961616,,,"https://scholar.google.co.kr/scholar?cites=3097734008368961616&as_sdt=2005&sciodt=0,5&hl=ko",2023-11-19T05:59:41.253Z,41,[],39,[42],2023-11-19T05:59:41.253Z
+41,action,,,2022.0,,3097734008368961616,,,"https://scholar.google.co.kr/scholar?as_ylo=2022&hl=ko&as_sdt=2005&sciodt=0,5&cites=3097734008368961616&scipsc=",2023-11-19T05:59:43.828Z,42,[43],41,[],2023-11-19T05:59:52.646Z

@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import json
 
 # Specify the path to the CSV file
 file_path = './data/search_logs.csv'
@@ -35,12 +36,15 @@ for i in range(len(df)):
 # set parent action node / set searched paper list
 df['searched_papers'] = [[] for _ in range(len(df))]
 df['parent'] = [None for _ in range(len(df))]
+df['children'] = [[] for _ in range(len(df))]
 for i in range(len(df)):
+    # update searched_papers
     if df.loc[i, 'logtype'] == 'paper':
         paper_id = df.loc[i, 'id']
         parent_id = df.loc[i-1, 'id']
         if paper_id not in df[df['id'] == parent_id].head(1).iloc[0]['searched_papers']:
             df[df['id'] == parent_id].head(1).iloc[0]['searched_papers'].append(paper_id)
+    # update parent and children
     else:
         action_num = df.loc[i, 'query':'authorID'].notnull().sum()
         print(i)
@@ -57,14 +61,53 @@ for i in range(len(df)):
                   current_id = df.loc[i, 'id']
                   parent_id = df.loc[i-2, 'id']
                   df.loc[df['id'] == current_id, 'parent'] = parent_id
+                  df[df['id'] == parent_id].head(1).iloc[0]['children'].append(current_id)
           # multi action
           else:
               print('i-1')
               current_id = df.loc[i, 'id']
               parent_id = df.loc[i-1, 'id']
               df.loc[df['id'] == current_id, 'parent'] = parent_id
+              df[df['id'] == parent_id].head(1).iloc[0]['children'].append(current_id)
 
-df.to_csv('test.csv')
-import pdb; pdb.set_trace()
+# -------------------------------------------------------------------
+# remove all redundant nodes
+df['Timestamp_end'] = [None for _ in range(len(df))]
 
-# TODO : 
+# Initialize compressed_df as an empty DataFrame with the same columns as df
+compressed_df = pd.DataFrame(columns=df.columns)
+
+for i in range(1, df['id'].max() + 1):
+    same_nodes = df[df['id'] == i]
+    end_time = same_nodes.iloc[-1]['Timestamp']  # Gets the last Timestamp
+    df.loc[df['id'] == i, 'Timestamp_end'] = end_time
+    same_nodes = df[df['id'] == i]
+    # Append the first row of same_nodes to compressed_df
+    compressed_df = compressed_df.append(same_nodes.iloc[0], ignore_index=True)
+
+# paper as csv
+paper_df = compressed_df[compressed_df['logtype'] == 'paper']
+action_df = compressed_df[compressed_df['logtype'] == 'action']
+
+paper_df.to_csv('paper.csv')
+action_df.to_csv('action.csv')
+
+def makeTreeDFS(id, action_df):
+    node = {'name': id, 'children': [], 'attributes': {}}
+    # Find rows where 'parent' is the current id
+    children_df = action_df[action_df['parent'] == id]
+
+    for _, child_row in children_df.iterrows():
+        c_id = child_row['id']
+        node['children'].append(makeTreeDFS(c_id, action_df))
+
+    return node
+
+# Assuming action_df is your DataFrame
+tree = []
+root_ids = action_df[action_df['parent'].isnull()]['id']
+for id in root_ids:
+    tree.append(makeTreeDFS(id, action_df))
+
+with open('actiontree.json', 'w') as file:
+    json.dump(tree, file, indent=4)

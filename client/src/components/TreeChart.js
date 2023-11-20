@@ -46,7 +46,7 @@ const TreeChart = (props) => {
 	return (
 		<div style={containerStyles} ref={containerRef}>
     <Tree
-        data={orgChartJson[1]}
+        data={orgChartJson[2]}
         translate={translate}
         nodeSize={nodeSize}
         renderCustomNodeElement={(rd3tProps) =>

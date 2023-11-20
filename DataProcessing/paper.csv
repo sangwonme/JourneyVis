@@ -1,0 +1,29 @@
+,logtype,title,query,startYear,endYear,citedBy,authorID,cluster,url,Timestamp,id,searched_papers,parent,children,Timestamp_end
+1,paper,Is early intervention effective?,,,,,,,,2023-11-19T05:46:42.970Z,2,[],,[],2023-11-19T05:46:42.970Z
+3,paper,"Bringing order out of chaos: Psychometric characteristics of the confusion, hubbub, and order scale",,,,,,,,2023-11-19T05:46:49.431Z,4,[],,[],2023-11-19T05:46:49.431Z
+4,paper,"Revisiting"" Rethinking early intervention""",,,,,,,,2023-11-19T05:48:43.575Z,5,[],,[],2023-11-19T05:48:43.575Z
+5,paper,Early intervention: A global perspective,,,,,,,,2023-11-19T05:49:04.547Z,6,[],,[],2023-11-19T05:49:04.547Z
+7,paper,Early learning and school readiness: Can early intervention make a difference?,,,,,,,,2023-11-19T05:49:38.898Z,8,[],,[],2023-11-19T05:53:17.412Z
+8,paper,Effect of foster care on language learning at eight years: findings from the Bucharest Early Intervention Project,,,,,,,,2023-11-19T05:54:34.119Z,9,[],,[],2023-11-19T05:54:49.132Z
+10,paper,Language exposure relates to structural neural connectivity in childhood,,,,,,,,2023-11-19T05:54:54.026Z,11,[],,[],2023-11-19T05:54:54.026Z
+12,paper,The value of dimensional models of early experience: Thinking clearly about concepts and categories,,,,,,,,2023-11-19T05:54:56.942Z,13,[],,[],2023-11-19T05:54:56.942Z
+14,paper,A review on speech recognition technique,,,,,,,,2023-11-19T05:55:39.710Z,15,[],,[],2023-11-19T05:56:00.079Z
+20,paper,Google usm: Scaling automatic speech recognition beyond 100 languages,,,,,,,,2023-11-19T05:57:26.183Z,21,[],,[],2023-11-19T05:57:37.263Z
+24,paper,Specaugment: A simple data augmentation method for automatic speech recognition,,,,,,,,2023-11-19T05:57:40.578Z,25,[],,[],2023-11-19T05:57:40.578Z
+25,paper,Natural tts synthesis by conditioning wavenet on mel spectrogram predictions,,,,,,,,2023-11-19T05:57:46.429Z,26,[],,[],2023-11-19T05:57:46.429Z
+26,paper,Transfer learning from speaker verification to multispeaker text-to-speech synthesis,,,,,,,,2023-11-19T05:57:49.996Z,27,[],,[],2023-11-19T05:57:54.668Z
+29,paper,"A Text-to-Speech Pipeline, Evaluation Methodology, and Initial Fine-Tuning Results for Child Speech Synthesis",,,,,,,,2023-11-19T05:58:07.347Z,30,[],,[],2023-11-19T05:58:07.347Z
+30,paper,Improved Child Text-to-Speech Synthesis through Fastpitch-based Transfer Learning,,,,,,,,2023-11-19T05:58:38.078Z,31,[],,[],2023-11-19T05:58:38.078Z
+31,paper,Child Speech Synthesis using Deep Learning,,,,,,,,2023-11-19T05:58:42.265Z,32,[],,[],2023-11-19T05:58:42.265Z
+32,paper,Didispeech: A large scale mandarin speech corpus,,,,,,,,2023-11-19T05:58:51.203Z,33,[],,[],2023-11-19T05:58:51.203Z
+34,paper,Learning pronunciation from a foreign language in speech synthesis networks,,,,,,,,2023-11-19T05:59:03.407Z,35,[],,[],2023-11-19T05:59:07.014Z
+36,paper,Adversarial Text-to-Speech for low-resource languages,,,,,,,,2023-11-19T05:59:17.069Z,37,[],,[],2023-11-19T05:59:17.069Z
+37,paper,Investigation of effectively synthesizing code-switched speech using highly imbalanced mix-lingual data,,,,,,,,2023-11-19T05:59:24.497Z,38,[],,[],2023-11-19T05:59:24.497Z
+39,paper,Univl: A unified video and language pre-training model for multimodal understanding and generation,,,,,,,,2023-11-19T05:59:37.651Z,40,[],,[],2023-11-19T05:59:40.429Z
+42,paper,"Vision-language pre-training: Basics, recent advances, and future trends",,,,,,,,2023-11-19T05:59:46.379Z,43,[],,[],2023-11-19T05:59:46.379Z
+43,paper,Rethinking early intervention,,,,,,,,2023-11-19T06:01:22.377Z,44,[],,[],2023-11-19T06:01:22.377Z
+44,paper,Social competence and early intervention,,,,,,,,2023-11-19T06:02:21.965Z,45,[],,[],2023-11-19T06:02:21.965Z
+45,paper,Routines-based early intervention,,,,,,,,2023-11-19T06:03:10.299Z,46,[],,[],2023-11-19T06:03:10.299Z
+46,paper,An overview of the developmental systems model for early intervention,,,,,,,,2023-11-19T06:03:15.303Z,47,[],,[],2023-11-19T06:03:18.172Z
+47,paper,Prevention and early intervention to improve mental health in higher education students: a review,,,,,,,,2023-11-19T06:37:22.023Z,48,[],,[],2023-11-19T06:37:22.023Z
+48,paper,Parent education in early intervention: A call for a renewed focus,,,,,,,,2023-11-19T06:37:34.822Z,49,[],,[],2023-11-19T06:37:34.822Z
