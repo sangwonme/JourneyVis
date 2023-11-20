@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import TreeChart from "./components/TreeChart";
+import TreeChart from "./components/TreeChartRelated/TreeChart";
 
 export default function App() {
   return (
