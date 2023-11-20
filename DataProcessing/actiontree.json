@@ -5,10 +5,40 @@
             {
                 "name": 3,
                 "children": [],
-                "attributes": {}
+                "attributes": {
+                    "searched_papers": [
+                        4
+                    ],
+                    "query": "",
+                    "citedBy": "6864630954541468524",
+                    "authorID": "",
+                    "year": "",
+                    "url": "https://scholar.google.co.kr/scholar?cites=6864630954541468524&as_sdt=2005&sciodt=0,5&hl=ko",
+                    "timestamp_start": "2023-11-19T05:46:43.763Z",
+                    "timestamp_end": "2023-11-19T05:46:53.141Z"
+                }
             }
         ],
-        "attributes": {}
+        "attributes": {
+            "searched_papers": [
+                2,
+                5,
+                6,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49
+            ],
+            "query": "early intervention",
+            "citedBy": "",
+            "authorID": "",
+            "year": "",
+            "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=early+intervention&oq=",
+            "timestamp_start": "2023-11-19T05:46:27.589Z",
+            "timestamp_end": "2023-11-19T06:37:46.974Z"
+        }
     },
     {
         "name": 7,
@@ -19,13 +49,47 @@
                     {
                         "name": 12,
                         "children": [],
-                        "attributes": {}
+                        "attributes": {
+                            "searched_papers": [
+                                13
+                            ],
+                            "query": "",
+                            "citedBy": "9724932194597403639",
+                            "authorID": "",
+                            "year": "",
+                            "url": "https://scholar.google.co.kr/scholar?cites=9724932194597403639&as_sdt=2005&sciodt=0,5&hl=ko",
+                            "timestamp_start": "2023-11-19T05:54:54.826Z",
+                            "timestamp_end": "2023-11-19T05:54:54.826Z"
+                        }
                     }
                 ],
-                "attributes": {}
+                "attributes": {
+                    "searched_papers": [
+                        11
+                    ],
+                    "query": "",
+                    "citedBy": "17079930752446188308",
+                    "authorID": "",
+                    "year": "",
+                    "url": "https://scholar.google.co.kr/scholar?cites=17079930752446188308&as_sdt=2005&sciodt=0,5&hl=ko",
+                    "timestamp_start": "2023-11-19T05:54:49.933Z",
+                    "timestamp_end": "2023-11-19T05:54:49.933Z"
+                }
             }
         ],
-        "attributes": {}
+        "attributes": {
+            "searched_papers": [
+                8,
+                9
+            ],
+            "query": "early intervention language learning",
+            "citedBy": "",
+            "authorID": "",
+            "year": "",
+            "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=early+intervention+language+learning&btnG=&oq=early+intervention",
+            "timestamp_start": "2023-11-19T05:49:34.763Z",
+            "timestamp_end": "2023-11-19T05:54:45.771Z"
+        }
     },
     {
         "name": 14,
@@ -33,7 +97,16 @@
             {
                 "name": 16,
                 "children": [],
-                "attributes": {}
+                "attributes": {
+                    "searched_papers": [],
+                    "query": "",
+                    "citedBy": "5321848940423579623",
+                    "authorID": "",
+                    "year": "",
+                    "url": "https://scholar.google.co.kr/scholar?cites=5321848940423579623&as_sdt=2005&sciodt=0,5&hl=ko",
+                    "timestamp_start": "2023-11-19T05:55:40.491Z",
+                    "timestamp_end": "2023-11-19T05:55:40.491Z"
+                }
             },
             {
                 "name": 17,
@@ -50,12 +123,30 @@
                                             {
                                                 "name": 22,
                                                 "children": [],
-                                                "attributes": {}
+                                                "attributes": {
+                                                    "searched_papers": [],
+                                                    "query": "",
+                                                    "citedBy": "17752285616737220261",
+                                                    "authorID": "",
+                                                    "year": "",
+                                                    "url": "https://scholar.google.co.kr/scholar?cites=17752285616737220261&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                    "timestamp_start": "2023-11-19T05:57:26.983Z",
+                                                    "timestamp_end": "2023-11-19T05:57:26.983Z"
+                                                }
                                             },
                                             {
                                                 "name": 23,
                                                 "children": [],
-                                                "attributes": {}
+                                                "attributes": {
+                                                    "searched_papers": [],
+                                                    "query": "",
+                                                    "citedBy": "",
+                                                    "authorID": "OkngbkkAAAAJ",
+                                                    "year": "",
+                                                    "url": "https://scholar.google.co.kr/citations?user=OkngbkkAAAAJ&hl=ko&oi=sra",
+                                                    "timestamp_start": "2023-11-19T05:57:31.140Z",
+                                                    "timestamp_end": "2023-11-19T05:57:31.140Z"
+                                                }
                                             },
                                             {
                                                 "name": 24,
@@ -72,34 +163,142 @@
                                                                             {
                                                                                 "name": 36,
                                                                                 "children": [],
-                                                                                "attributes": {}
+                                                                                "attributes": {
+                                                                                    "searched_papers": [
+                                                                                        37,
+                                                                                        38
+                                                                                    ],
+                                                                                    "query": "",
+                                                                                    "citedBy": "2087910909039998794",
+                                                                                    "authorID": "",
+                                                                                    "year": "",
+                                                                                    "url": "https://scholar.google.co.kr/scholar?cites=2087910909039998794&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                                                    "timestamp_start": "2023-11-19T05:59:07.859Z",
+                                                                                    "timestamp_end": "2023-11-19T05:59:28.536Z"
+                                                                                }
                                                                             }
                                                                         ],
-                                                                        "attributes": {}
+                                                                        "attributes": {
+                                                                            "searched_papers": [
+                                                                                35
+                                                                            ],
+                                                                            "query": "korean",
+                                                                            "citedBy": "14002861277903846410",
+                                                                            "authorID": "",
+                                                                            "year": "",
+                                                                            "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=14002861277903846410&scipsc=1&q=korean&btnG=",
+                                                                            "timestamp_start": "2023-11-19T05:58:58.879Z",
+                                                                            "timestamp_end": "2023-11-19T05:59:05.747Z"
+                                                                        }
                                                                     }
                                                                 ],
-                                                                "attributes": {}
+                                                                "attributes": {
+                                                                    "searched_papers": [
+                                                                        30,
+                                                                        31,
+                                                                        32,
+                                                                        33
+                                                                    ],
+                                                                    "query": "child",
+                                                                    "citedBy": "14002861277903846410",
+                                                                    "authorID": "",
+                                                                    "year": "",
+                                                                    "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=14002861277903846410&scipsc=1&q=child&btnG=",
+                                                                    "timestamp_start": "2023-11-19T05:58:04.049Z",
+                                                                    "timestamp_end": "2023-11-19T05:58:56.250Z"
+                                                                }
                                                             }
                                                         ],
-                                                        "attributes": {}
+                                                        "attributes": {
+                                                            "searched_papers": [],
+                                                            "query": "",
+                                                            "citedBy": "14002861277903846410",
+                                                            "authorID": "",
+                                                            "year": "",
+                                                            "url": "https://scholar.google.co.kr/scholar?oi=bibs&hl=ko&cites=14002861277903846410",
+                                                            "timestamp_start": "2023-11-19T05:57:55.477Z",
+                                                            "timestamp_end": "2023-11-19T05:57:55.477Z"
+                                                        }
                                                     }
                                                 ],
-                                                "attributes": {}
+                                                "attributes": {
+                                                    "searched_papers": [
+                                                        25,
+                                                        26,
+                                                        27
+                                                    ],
+                                                    "query": "",
+                                                    "citedBy": "",
+                                                    "authorID": "EilVnKwAAAAJ",
+                                                    "year": "",
+                                                    "url": "https://scholar.google.co.kr/citations?user=EilVnKwAAAAJ&hl=ko&oi=sra",
+                                                    "timestamp_start": "2023-11-19T05:57:38.089Z",
+                                                    "timestamp_end": "2023-11-19T05:57:53.661Z"
+                                                }
                                             }
                                         ],
-                                        "attributes": {}
+                                        "attributes": {
+                                            "searched_papers": [
+                                                21
+                                            ],
+                                            "query": "automatic speech recognition",
+                                            "citedBy": "",
+                                            "authorID": "",
+                                            "year": 2022.0,
+                                            "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2022&q=automatic+speech+recognition&btnG=&oq=automatic+sp",
+                                            "timestamp_start": "2023-11-19T05:57:16.989Z",
+                                            "timestamp_end": "2023-11-19T05:57:35.574Z"
+                                        }
                                     }
                                 ],
-                                "attributes": {}
+                                "attributes": {
+                                    "searched_papers": [],
+                                    "query": "ASR",
+                                    "citedBy": "",
+                                    "authorID": "",
+                                    "year": 2022.0,
+                                    "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=ASR&hl=ko&as_sdt=0,5",
+                                    "timestamp_start": "2023-11-19T05:57:10.460Z",
+                                    "timestamp_end": "2023-11-19T05:57:10.460Z"
+                                }
                             }
                         ],
-                        "attributes": {}
+                        "attributes": {
+                            "searched_papers": [],
+                            "query": "ASR",
+                            "citedBy": "",
+                            "authorID": "",
+                            "year": 2019.0,
+                            "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2019&q=ASR&btnG=",
+                            "timestamp_start": "2023-11-19T05:57:03.936Z",
+                            "timestamp_end": "2023-11-19T05:57:03.936Z"
+                        }
                     }
                 ],
-                "attributes": {}
+                "attributes": {
+                    "searched_papers": [],
+                    "query": "speech recognition",
+                    "citedBy": "",
+                    "authorID": "",
+                    "year": 2019.0,
+                    "url": "https://scholar.google.co.kr/scholar?as_ylo=2019&q=speech+recognition&hl=ko&as_sdt=0,5",
+                    "timestamp_start": "2023-11-19T05:56:54.607Z",
+                    "timestamp_end": "2023-11-19T05:56:54.607Z"
+                }
             }
         ],
-        "attributes": {}
+        "attributes": {
+            "searched_papers": [
+                15
+            ],
+            "query": "speech recognition",
+            "citedBy": "",
+            "authorID": "",
+            "year": "",
+            "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=speech+recognition&btnG=",
+            "timestamp_start": "2023-11-19T05:55:23.330Z",
+            "timestamp_end": "2023-11-19T05:56:34.054Z"
+        }
     },
     {
         "name": 39,
@@ -110,12 +309,43 @@
                     {
                         "name": 42,
                         "children": [],
-                        "attributes": {}
+                        "attributes": {
+                            "searched_papers": [
+                                43
+                            ],
+                            "query": "",
+                            "citedBy": "3097734008368961616",
+                            "authorID": "",
+                            "year": 2022.0,
+                            "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&hl=ko&as_sdt=2005&sciodt=0,5&cites=3097734008368961616&scipsc=",
+                            "timestamp_start": "2023-11-19T05:59:43.828Z",
+                            "timestamp_end": "2023-11-19T05:59:52.646Z"
+                        }
                     }
                 ],
-                "attributes": {}
+                "attributes": {
+                    "searched_papers": [],
+                    "query": "",
+                    "citedBy": "3097734008368961616",
+                    "authorID": "",
+                    "year": "",
+                    "url": "https://scholar.google.co.kr/scholar?cites=3097734008368961616&as_sdt=2005&sciodt=0,5&hl=ko",
+                    "timestamp_start": "2023-11-19T05:59:41.253Z",
+                    "timestamp_end": "2023-11-19T05:59:41.253Z"
+                }
             }
         ],
-        "attributes": {}
+        "attributes": {
+            "searched_papers": [
+                40
+            ],
+            "query": "video understanding multimodal",
+            "citedBy": "",
+            "authorID": "",
+            "year": "",
+            "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=video+understanding+multimodal&oq=",
+            "timestamp_start": "2023-11-19T05:59:35.191Z",
+            "timestamp_end": "2023-11-19T05:59:39.506Z"
+        }
     }
 ]

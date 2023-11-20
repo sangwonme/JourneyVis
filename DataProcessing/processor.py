@@ -94,14 +94,37 @@ action_df.to_csv('action.csv')
 
 def makeTreeDFS(id, action_df):
     node = {'name': id, 'children': [], 'attributes': {}}
+    # Fill the attributes
+    tmp = action_df[action_df['id'] == id]
+    searched_papers = tmp['searched_papers'].values[0]
+    query = tmp['query'].values[0]
+    citedBy = tmp['citedBy'].values[0]
+    authorID = tmp['authorID'].values[0]
+    year = tmp['startYear'].values[0]
+    url = tmp['url'].values[0]
+    timestamp_start = tmp['Timestamp'].values[0]
+    timestamp_end = tmp['Timestamp_end'].values[0]
+
+    node['attributes'] = {
+        'searched_papers': searched_papers,
+        'query': query if query != np.nan else "",
+        'citedBy': citedBy if citedBy != np.nan else "",
+        'authorID': authorID if authorID != np.nan else "",
+        'year': year if year != np.nan else "",
+        'url': url if url != np.nan else "",
+        'timestamp_start': timestamp_start,
+        'timestamp_end': timestamp_end,
+    }
     # Find rows where 'parent' is the current id
     children_df = action_df[action_df['parent'] == id]
+    
 
     for _, child_row in children_df.iterrows():
         c_id = child_row['id']
         node['children'].append(makeTreeDFS(c_id, action_df))
 
     return node
+
 
 # Assuming action_df is your DataFrame
 tree = []

@@ -37,11 +37,21 @@
   z-index: -1;
 }
 
+.actionLogContainer{
+  width: 20%;
+  height: 100%;
+}
+
 .treeChartContainer{
   width: 60%;
   height: 100%;
   border-left: 1px solid rgb(222, 222, 222);
   border-right: 1px solid rgb(222, 222, 222);
+}
+
+.paperListContainer{
+  width: 20%;
+  height: 100%;
 }
 
 /* ControlPanel */
@@ -54,6 +64,17 @@
 
 .controlPanelContainer h1{
   margin-bottom: 0;
+}
+
+/* ActionLog */
+.actionLogContainer{
+
+}
+
+.actionLogContainer .title{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* ActionNode */

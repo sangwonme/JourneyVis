@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState} from "react";
 import Tree from "react-d3-tree";
-import orgChartJson from "../../data/actionTree.json";
+import actionTree from "../../data/actionTree.json";
 import { useCenteredTree } from "../../helpers";
 import ActionNode from "./ActionNode";
 
@@ -33,7 +33,7 @@ const TreeChart = (props) => {
 	return (
 		<div ref={containerRef} className="treeChartContainer">
     <Tree
-        data={orgChartJson[2]}
+        data={actionTree[2]}
         translate={translate}
         nodeSize={nodeSize}
         zoomable={true}
