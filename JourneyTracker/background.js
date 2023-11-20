@@ -25,10 +25,8 @@ chrome.webNavigation.onCommitted.addListener(
                         url: details.url,
                         timestamp: new Date().toISOString()
                     };
-                    console.log(searchLogs)
                     searchLogs.push(searchAction);
                     chrome.storage.local.set({ searchLogs: searchLogs });
-                    console.log(searchAction)
                 });
             }
 

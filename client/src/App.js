@@ -11,10 +11,6 @@ export default function App() {
   const [selectedQuery, setSelectedQuery] = useState(null);
   const [selectedAction, setSelectedAction] = useState(null);
 
-  useEffect(()=>{
-    console.log(selectedAction)
-  }, [selectedAction])
-
   return (
     <div className="layout">
       <ControlPanel/>

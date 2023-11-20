@@ -89,8 +89,8 @@ for i in range(1, df['id'].max() + 1):
 paper_df = compressed_df[compressed_df['logtype'] == 'paper']
 action_df = compressed_df[compressed_df['logtype'] == 'action']
 
-paper_df.to_csv('paper.csv')
-action_df.to_csv('action.csv')
+paper_df.set_index('id').to_json('paper.json')
+action_df.set_index('id').to_json('action.json')
 
 def makeTreeDFS(id, action_df):
     node = {'name': id, 'children': [], 'attributes': {}}
