@@ -28,22 +28,30 @@ const TreeChart = (props) => {
                                 y: -customNodeSize.y/2
                               };
 
+  let selectedQuery = props.selectedQuery;
+  useEffect(() => {
+    selectedQuery = props.selectedQuery;
+  }, [props]);
   
+  console.log(selectedQuery)
 
 	return (
 		<div ref={containerRef} className="treeChartContainer">
-    <Tree
-        data={actionTree[2]}
-        translate={translate}
-        nodeSize={nodeSize}
-        zoomable={true}
-        renderCustomNodeElement={(rd3tProps) =>{
-          return ActionNode({ ...rd3tProps, foreignObjectProps })
-        }
-        }
-        pathFunc={(linkData) => drawPath(linkData, foreignObjectProps)}
-        orientation="horizontal"
-      />
+      {
+      (selectedQuery != null) &&   
+      <Tree
+          data={actionTree[selectedQuery]}
+          translate={translate}
+          nodeSize={nodeSize}
+          zoomable={true}
+          renderCustomNodeElement={(rd3tProps) =>{
+            return ActionNode({ ...rd3tProps, foreignObjectProps })
+          }
+          }
+          pathFunc={(linkData) => drawPath(linkData, foreignObjectProps)}
+          orientation="horizontal"
+        />
+      }
     </div>
 	);
 };
