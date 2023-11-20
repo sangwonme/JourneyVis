@@ -138,7 +138,7 @@ p {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #9fd7ff ;
+  background-color: #007bff ;
   box-sizing: border-box;
 
   /* center */
@@ -149,25 +149,14 @@ p {
 
 
 .actionNode:hover{
-  border: #0070c1 2px solid;
+  filter: brightness(85%);
 }
 
-.cilked .actionNode{
+.actionNode.selected{
   border: black 2px solid;
 }
 
-.triangle{
-  display: none;
-}
-
-.paperList{
-  display: none;
-
-  word-wrap: break-all;
-  overflow-y: scroll;
-}
-
-.clicked .triangle {
+.triangle {
   display: block;
   width: 0;
   height: 0;
@@ -177,8 +166,10 @@ p {
   transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.clicked .paperList {
-  display: block;
+.paperList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 380px;
   height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -189,4 +180,5 @@ p {
   overflow: hidden; /* Ensures nothing spills out of the rounded corners */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
   transform: translateY(-2px); /* Slight lift effect on hover */
+  
 }

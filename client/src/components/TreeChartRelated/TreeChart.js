@@ -28,12 +28,14 @@ const TreeChart = (props) => {
                                 y: -customNodeSize.y/2
                               };
 
+  const setSelectedAction = props.setSelectedAction;
   let selectedQuery = props.selectedQuery;
+  let selectedAction = props.selectedAction;
   useEffect(() => {
     selectedQuery = props.selectedQuery;
+    selectedAction = props.selectedAction;
   }, [props]);
   
-  console.log(selectedQuery)
 
 	return (
 		<div ref={containerRef} className="treeChartContainer">
@@ -45,7 +47,7 @@ const TreeChart = (props) => {
           nodeSize={nodeSize}
           zoomable={true}
           renderCustomNodeElement={(rd3tProps) =>{
-            return ActionNode({ ...rd3tProps, foreignObjectProps })
+            return ActionNode({ ...rd3tProps, foreignObjectProps, setSelectedAction, selectedAction })
           }
           }
           pathFunc={(linkData) => drawPath(linkData, foreignObjectProps)}

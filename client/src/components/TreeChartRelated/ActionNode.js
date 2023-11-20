@@ -2,45 +2,28 @@ import React, { useRef, useEffect, useState} from "react";
 
 const ActionNode = ({
   nodeDatum,
-  toggleNode,
-  foreignObjectProps
+  foreignObjectProps,
+  setSelectedAction,
+  selectedAction
 }) => {
 
-  const onClickNode = (nodeData) => {
-    const divTag = nodeData['target'].closest('.nodeContainer');
-    divTag.classList.toggle('clicked')
-    console.log(nodeData['target']);
-  };
 
   return (
   <g>
     <foreignObject {...foreignObjectProps}>
-      <div id={`id${nodeDatum.name}`} className="nodeContainer" >
+      <div id={`id${nodeDatum.name}`} className="nodeContainer" onClick={() => setSelectedAction(nodeDatum.name)}>
 
-        <div className="actionNode" onClick={onClickNode}>
-          <h3>{nodeDatum.name}</h3>
-        </div>
+        <div className={`actionNode ${selectedAction==nodeDatum.name && 'selected'}`}></div>
 
-
-        <div className="triangle"></div>
-        <div className="paperList">
-          <p>Query blah blah blah blah blah blah blah blah</p>
-          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
-            backgroundColor
-          </p>
-          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
-            backgroundColor
-          </p>
-          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
-            backgroundColor
-          </p>
-          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
-            backgroundColor
-          </p>
-          <p>paper title blah blah blah blah blah blah blah backgroundColor backgroundColorb
-            backgroundColor
-          </p>
-        </div>
+        {
+          selectedAction==nodeDatum.name &&
+          <>
+          <div className="triangle"></div>
+          <div className="paperList">
+            <p>Memo</p>
+          </div>
+          </>  
+        }
       </div>
     </foreignObject>
   </g>
