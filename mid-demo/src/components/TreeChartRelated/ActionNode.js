@@ -7,7 +7,6 @@ const ActionNode = ({
   selectedAction
 }) => {
 
-
   return (
   <g>
     <foreignObject {...foreignObjectProps}>
