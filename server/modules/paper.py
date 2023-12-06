@@ -4,14 +4,22 @@ import re
 import json
 import pickle
 import numpy as np
+import pandas as pd
+import os
 
 class Paper:
     def __init__(self, paper_df):
-        self.paper_df = paper_df
-        # add columns
-        self.attr = ['author_list', 'abstract', 'venue', 'year', 'domain', 'url', 'citation', 'cite_url', 'html']
-        for col in self.attr:
-            self.paper_df[col] = np.nan
+        self.cachepath ='./cache/paperdf.pkl'
+        try:
+            self.paper_df = pd.read_pickle(self.cachepath)
+            print('load paper_df pickle.')
+            import pdb; pdb.set_trace()
+        except:
+            # add columns
+            self.paper_df = paper_df
+            self.attr = ['author_list', 'abstract', 'venue', 'year', 'domain', 'url', 'citation', 'cite_url', 'html']
+            for col in self.attr:
+                self.paper_df[col] = None
         # update columns (metadata)
         self.update_all_metadata()
 
@@ -152,16 +160,19 @@ class Paper:
 
 
     def save_pickle(self):
-        pass
+        self.paper_df.to_pickle(self.cachepath)
+        print('saved paper_df.')
 
     def update_all_metadata(self):
         # iterate for all rows
-        for idx, row in self.paper_df.iterrows():
-            title = row['title']
-            if np.isnan(row['html']):
-                res = self.get_paper_metadata(title)
-                for col in self.attr:
-                    self.paper_df.loc[idx, col] = str(res[col])
-            import pdb; pdb.set_trace()
+        try:
+            for idx, row in self.paper_df.iterrows():
+                title = row['title']
+                if not row['html']:
+                    res = self.get_paper_metadata(title)
+                    for col in self.attr:
+                        self.paper_df.loc[idx, col] = str(res[col])
+        finally:
+            self.save_pickle()
 
         return
