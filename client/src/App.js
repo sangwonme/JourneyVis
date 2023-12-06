@@ -5,8 +5,8 @@ import FetchData from './util/FetchData';
 
 function App() {
   return (
-    // <Layout/>
-    <FetchData/>
+    <Layout/>
+    // <FetchData/>
   );
 }
 
