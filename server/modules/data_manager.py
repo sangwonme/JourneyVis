@@ -4,6 +4,7 @@ import json
 
 from modules.tree import Tree
 from modules.paper import Paper
+from modules.similarity import Similarity
 
 class DataManager:
     def __init__(self, csv_data):
@@ -15,7 +16,18 @@ class DataManager:
         self.paper = Paper(paper_df)
         self.paper_df = self.paper.get_df()
         # create tree DB
+        # TODO
+        # create Similarity object
+        self.sm = Similarity()
     
+    def get_similarity_btw_papers(self, paper_list, title_weight):
+        title_data = self.paper_df.loc[paper_list, 'title'].values
+        title_sim_mat = self.sm.calculate_similarity(title_data)
+        abstract_data = self.paper_df.loc[paper_list, 'abstract'].values
+        abstract_sim_mat = self.sm.calculate_similarity(abstract_data)
+        sim_mat = title_weight*(title_sim_mat) + (1-title_weight)*(abstract_sim_mat)
+        return sim_mat
+
     # give id for every papers and actions considering redundant datas
     @staticmethod
     def create_id(csv_data):
