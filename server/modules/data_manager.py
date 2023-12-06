@@ -13,6 +13,8 @@ class DataManager:
         paper_df = self.data[self.data['logtype'] == 'paper']
         paper_df = paper_df.loc[:,['id', 'title', 'Timestamp', 'Timestamp_end']]
         self.paper = Paper(paper_df)
+        self.paper_df = self.paper.get_df()
+        # create tree DB
     
     # give id for every papers and actions considering redundant datas
     @staticmethod

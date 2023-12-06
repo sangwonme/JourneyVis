@@ -13,7 +13,6 @@ class Paper:
         try:
             self.paper_df = pd.read_pickle(self.cachepath)
             print('load paper_df pickle.')
-            import pdb; pdb.set_trace()
         except:
             # add columns
             self.paper_df = paper_df
@@ -37,7 +36,7 @@ class Paper:
         
     @staticmethod
     def crawl_authors(paper_element):
-        import pdb; pdb.set_trace()
+        
         authors_text = paper_element.find('div', 'gs_a').text
         authors_text = authors_text.replace('…', '')
         authors_text = authors_text. replace(u'\xa0', u'')
@@ -97,10 +96,8 @@ class Paper:
         return api_result.json()
 
     def get_paper_metadata(self, title):
-        # get api_result -> TODO : Change with call_api
-        file_path = "./apitest.json"
-        with open(file_path, 'r') as file:
-            data = json.load(file)
+        # get api_result 
+        data = self.call_api(title)
         # 1) get_author
         try:
             author_list = data['scholar_results'][0]['displayed_link'].replace('…', '').split(' - ')[0].split(', ')
@@ -172,7 +169,13 @@ class Paper:
                     res = self.get_paper_metadata(title)
                     for col in self.attr:
                         self.paper_df.loc[idx, col] = str(res[col])
+                    print('------------------------')
+                    print('update', title)
+                    print('------------------------')
         finally:
             self.save_pickle()
 
         return
+    
+    def get_df(self):
+        return self.paper_df
