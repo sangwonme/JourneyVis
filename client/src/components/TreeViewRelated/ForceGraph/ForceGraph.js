@@ -33,8 +33,6 @@ const ForceGraph = ({data}) => {
       .on("zoom", (event) => {
         g.attr("transform", event.transform);
       });
-
-    // Apply the zoom behavior to the SVG element
     svg.call(zoom);
 
     // Replace the input nodes and links with mutable objects for the simulation.
@@ -43,58 +41,58 @@ const ForceGraph = ({data}) => {
       source: LS[i],
       target: LT[i]
     }));
-
     console.log("links: ", links);
     console.log("nodes: ", nodes);
 
+    // -------------------------------------------------------------------------------------
+    // draw the svg region 
     svg
       .attr("viewBox", [0, 0, width, height])
       .attr("width", width)
       .attr("height", height)
-      .attr("style", "background-color: lightgray");
-
-
-
+      .attr("style", "background-color: white");
+    // -------------------------------------------------------------------------------------
+    // draw link and nodes
     const link = g.selectAll(".link")
-      .data(links)
-      .join("line")
-      .attr("stroke", 'black')
-      .classed("link", true);
+    .data(links)
+    .join("line")
+    .attr("stroke", 'black')
+    .classed("link", true);
     
     const node = g.selectAll(".node")
-      .data(nodes)
-      .join("circle")
-      .attr("r", 12)
-      .classed("node", true)
-      .classed("fixed", (d) => d.fx !== undefined);
-
-
-    svg.node();
-
+    .data(nodes)
+    .join("circle")
+    .attr("r", 12)
+    .classed("node", true)
+    .classed("fixed", (d) => d.fx !== undefined);
+    // svg.node();
+    // -------------------------------------------------------------------------------------
+    // color
 
     // Construct the scales.
     let nodeGroups = d3.sort(G);
     console.log(nodeGroups);
     const color =
-      nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
-
+    nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
+    
     // Construct the forces.
     const forceNode = d3.forceManyBody();
     const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]);
-
+    
     const simulation = d3
       .forceSimulation(nodes)
       .force("link", forceLink)
       .force("charge", d3.forceManyBody())
       .force("center", d3.forceCenter(width / 2, height / 2))
       .on("tick", tick);
-
+    
     if (G)
-      node.attr("fill", ({ index: i }) => {
-        console.log("index: ", i);
-        return color(G[i]);
-      });
-
+        node.attr("fill", ({ index: i }) => {
+      console.log("index: ", i);
+      return color(G[i]);
+    });
+// -------------------------------------------------------------------------------------
+    // drag interaction
     const drag = d3
       .drag()
       .on("start", dragstart)
@@ -134,6 +132,7 @@ const ForceGraph = ({data}) => {
       simulation.alpha(1).restart();
     }
   });
+// -------------------------------------------------------------------------------------
 
   return (
     <svg
