@@ -15,7 +15,7 @@ class Graph:
             }
             nodes.append(node)
             # create link
-            if row['parent']:
+            if row['parent'] != None:
                 link = {
                     "source": row['parent'],
                     "target": row['id'],
