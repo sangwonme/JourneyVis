@@ -1,0 +1,149 @@
+{
+    "nodes": [
+        {
+            "id": 0
+        },
+        {
+            "id": 2
+        },
+        {
+            "id": 6
+        },
+        {
+            "id": 9
+        },
+        {
+            "id": 11
+        },
+        {
+            "id": 13
+        },
+        {
+            "id": 15
+        },
+        {
+            "id": 16
+        },
+        {
+            "id": 17
+        },
+        {
+            "id": 18
+        },
+        {
+            "id": 19
+        },
+        {
+            "id": 21
+        },
+        {
+            "id": 22
+        },
+        {
+            "id": 23
+        },
+        {
+            "id": 27
+        },
+        {
+            "id": 28
+        },
+        {
+            "id": 33
+        },
+        {
+            "id": 35
+        },
+        {
+            "id": 38
+        },
+        {
+            "id": 40
+        },
+        {
+            "id": 41
+        }
+    ],
+    "links": [
+        {
+            "source": 6,
+            "target": 9,
+            "link_type": "cited_by"
+        },
+        {
+            "source": 9,
+            "target": 11,
+            "link_type": "cited_by"
+        },
+        {
+            "source": 13,
+            "target": 15,
+            "link_type": "cited_by"
+        },
+        {
+            "source": 13,
+            "target": 16,
+            "link_type": "advanced_search"
+        },
+        {
+            "source": 16,
+            "target": 17,
+            "link_type": "advanced_search"
+        },
+        {
+            "source": 17,
+            "target": 18,
+            "link_type": "advanced_search"
+        },
+        {
+            "source": 18,
+            "target": 19,
+            "link_type": "advanced_search"
+        },
+        {
+            "source": 19,
+            "target": 21,
+            "link_type": "cited_by"
+        },
+        {
+            "source": 19,
+            "target": 22,
+            "link_type": "same_author"
+        },
+        {
+            "source": 19,
+            "target": 23,
+            "link_type": "same_author"
+        },
+        {
+            "source": 23,
+            "target": 27,
+            "link_type": "cited_by"
+        },
+        {
+            "source": 27,
+            "target": 28,
+            "link_type": "advanced_search"
+        },
+        {
+            "source": 28,
+            "target": 33,
+            "link_type": "advanced_search"
+        },
+        {
+            "source": 33,
+            "target": 35,
+            "link_type": "cited_by"
+        },
+        {
+            "source": 38,
+            "target": 40,
+            "link_type": "cited_by"
+        },
+        {
+            "source": 40,
+            "target": 41,
+            "link_type": "advanced_search"
+        }
+    ]
+}

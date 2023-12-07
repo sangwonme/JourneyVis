@@ -18,7 +18,6 @@ class Paper:
         except:
             # add columns
             self.paper_df = paper_df
-            self.paper_df.set_index('id', inplace=True)
             self.attr = ['author_list', 'abstract', 'venue', 'year', 'domain', 'url', 'citation', 'cite_url', 'html']
             for col in self.attr:
                 self.paper_df[col] = None

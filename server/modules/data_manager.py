@@ -1,11 +1,13 @@
 import pandas as pd
 import numpy as np
 import json
+import os
 
 from modules.action import Action
 from modules.paper import Paper
 from modules.similarity import Similarity
 from modules.graph import Graph
+from modules.json_converter import JSONConverter
 
 class DataManager:
     def __init__(self, csv_data):
@@ -18,22 +20,31 @@ class DataManager:
         self.paper_df = self.paper.get_df()
         # create tree DB
         self.action = Action(self.data)
+        import pdb; pdb.set_trace()
         self.action_df = self.compress_df(self.action.get_df()) #compress after retreiving the df
         self.action_df = self.action_df[self.action_df['logtype'] == 'action']
         self.action_df = self.action_df.loc[:, ['id', 'query', 'startYear', 'endYear', 'citedBy', 'authorID', 'url', 'searched_papers', 'parent', 'children', 'link_type', 'seedpaper_id', 'Timestamp', 'Timestamp_end']]
         # create Similarity object
         self.sm = Similarity()
+        self.sim_mat = self.get_similarity_btw_papers(self.paper_df.index)
         # create Action Graph
         self.action_graph = Graph.create_action_graph(self.action_df)
         
     
-    def get_similarity_btw_papers(self, paper_list, title_weight):
-        title_data = self.paper_df.loc[:, 'title'].values
+    def get_similarity_btw_papers(self, paper_list, title_weight=0.8):
+        title_data = self.paper_df.loc[paper_list, 'title'].values
         title_sim_mat = self.sm.calculate_similarity(title_data)
-        abstract_data = self.paper_df.loc[:, 'abstract'].values
+        abstract_data = self.paper_df.loc[paper_list, 'abstract'].values
         abstract_sim_mat = self.sm.calculate_similarity(abstract_data)
         sim_mat = title_weight*(title_sim_mat) + (1-title_weight)*(abstract_sim_mat)
         return sim_mat
+
+    def export_data(self):
+        BASE_URL = './data_output'
+        JSONConverter.df_to_json(self.paper_df.set_index('id').drop('html', axis=1), os.path.join(BASE_URL, 'paper_df.json'))
+        JSONConverter.df_to_json(self.action_df.set_index('id'), os.path.join(BASE_URL, 'action_df.json'))
+        JSONConverter.dict_to_json(self.action_graph, os.path.join(BASE_URL, 'action_graph.json'))
+        JSONConverter.np_to_json(self.sim_mat, os.path.join(BASE_URL, 'sim_mat.json'))
 
     # give id for every papers and actions considering redundant datas
     @staticmethod
@@ -46,7 +57,7 @@ class DataManager:
         # set id
         df['id'] = None
         nodes = {}
-        id = 1
+        id = 0
         for i in range(len(df)):
             # key is for checking redundant nodes
             key = ''
@@ -77,7 +88,7 @@ class DataManager:
         # Initialize compressed_df as an empty DataFrame with the same columns as df
         compressed_df = pd.DataFrame(columns=df.columns)
 
-        for i in range(1, df['id'].max() + 1):
+        for i in range(0, df['id'].max() + 1):
             same_nodes = df[df['id'] == i]
             end_time = same_nodes.iloc[-1]['Timestamp']  # Gets the last Timestamp
             df.loc[df['id'] == i, 'Timestamp_end'] = end_time
@@ -86,3 +97,4 @@ class DataManager:
             compressed_df = compressed_df._append(same_nodes.iloc[0], ignore_index=True)
 
         return compressed_df
+    
