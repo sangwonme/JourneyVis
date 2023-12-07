@@ -13,6 +13,8 @@ class Paper:
         try:
             self.paper_df = pd.read_pickle(self.cachepath)
             print('load paper_df pickle.')
+            # TODO : Augment data
+
         except:
             # add columns
             self.paper_df = paper_df

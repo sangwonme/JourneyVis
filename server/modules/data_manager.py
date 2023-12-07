@@ -9,21 +9,24 @@ from modules.similarity import Similarity
 class DataManager:
     def __init__(self, csv_data):
         self.data = self.create_id(csv_data)
-        self.data = self.compress_df(self.data)
         # create paper DB
-        paper_df = self.data[self.data['logtype'] == 'paper']
-        paper_df = paper_df.loc[:,['id', 'title', 'Timestamp', 'Timestamp_end']]
-        self.paper = Paper(paper_df)
+        paper_input = self.compress_df(self.data)
+        paper_input = paper_input[paper_input['logtype'] == 'paper']
+        paper_input = paper_input.loc[:,['id', 'title', 'Timestamp', 'Timestamp_end']]
+        self.paper = Paper(paper_input)
         self.paper_df = self.paper.get_df()
         # create tree DB
-        # TODO
+        self.tree = Tree(self.data)
+        self.tree_df = self.compress_df(self.tree.get_df()) #compress after retreiving the df
+        self.tree_df = self.tree_df[self.tree_df['logtype'] == 'action']
+        self.tree_df = self.tree_df.loc[:, ['id', 'query', 'startYear', 'endYear', 'citedBy', 'authorID', 'url', 'searched_papers', 'parent', 'children', 'link_type', 'seedpaper_id', 'Timestamp', 'Timestamp_end']]
         # create Similarity object
         self.sm = Similarity()
     
     def get_similarity_btw_papers(self, paper_list, title_weight):
-        title_data = self.paper_df.loc[paper_list, 'title'].values
+        title_data = self.paper_df.loc[:, 'title'].values
         title_sim_mat = self.sm.calculate_similarity(title_data)
-        abstract_data = self.paper_df.loc[paper_list, 'abstract'].values
+        abstract_data = self.paper_df.loc[:, 'abstract'].values
         abstract_sim_mat = self.sm.calculate_similarity(abstract_data)
         sim_mat = title_weight*(title_sim_mat) + (1-title_weight)*(abstract_sim_mat)
         return sim_mat
