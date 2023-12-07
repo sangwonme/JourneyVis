@@ -2,9 +2,10 @@ import pandas as pd
 import numpy as np
 import json
 
-from modules.tree import Tree
+from modules.action import Action
 from modules.paper import Paper
 from modules.similarity import Similarity
+from modules.graph import Graph
 
 class DataManager:
     def __init__(self, csv_data):
@@ -16,12 +17,15 @@ class DataManager:
         self.paper = Paper(paper_input)
         self.paper_df = self.paper.get_df()
         # create tree DB
-        self.tree = Tree(self.data)
-        self.tree_df = self.compress_df(self.tree.get_df()) #compress after retreiving the df
-        self.tree_df = self.tree_df[self.tree_df['logtype'] == 'action']
-        self.tree_df = self.tree_df.loc[:, ['id', 'query', 'startYear', 'endYear', 'citedBy', 'authorID', 'url', 'searched_papers', 'parent', 'children', 'link_type', 'seedpaper_id', 'Timestamp', 'Timestamp_end']]
+        self.action = Action(self.data)
+        self.action_df = self.compress_df(self.action.get_df()) #compress after retreiving the df
+        self.action_df = self.action_df[self.action_df['logtype'] == 'action']
+        self.action_df = self.action_df.loc[:, ['id', 'query', 'startYear', 'endYear', 'citedBy', 'authorID', 'url', 'searched_papers', 'parent', 'children', 'link_type', 'seedpaper_id', 'Timestamp', 'Timestamp_end']]
         # create Similarity object
         self.sm = Similarity()
+        # create Action Graph
+        self.action_graph = Graph.create_action_graph(self.action_df)
+        
     
     def get_similarity_btw_papers(self, paper_list, title_weight):
         title_data = self.paper_df.loc[:, 'title'].values

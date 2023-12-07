@@ -6,19 +6,19 @@ import numpy as np
 import pandas as pd
 import os
 
-class Tree:
+class Action:
     def __init__(self, full_data):
-        self.cachepath = './cache/treedf.pkl'
+        self.cachepath = './cache/actiondf.pkl'
         try:
-            self.tree_df = pd.read_pickle(self.cachepath)
-            print('load tree_df pickle.')
+            self.action_df = pd.read_pickle(self.cachepath)
+            print('load action_df pickle.')
         except:
-            self.tree_df = self.create_tree(full_data)
+            self.action_df = self.create_action(full_data)
             self.save_pickle()
             
-    # df(full_data) -> create tree
+    # df(full_data) -> create action
     @staticmethod
-    def create_tree(df):
+    def create_action(df):
         # add columns
         df['searched_papers'] = [[] for _ in range(len(df))]
         df['parent'] = [None for _ in range(len(df))]
@@ -63,9 +63,9 @@ class Tree:
         return df
 
     def save_pickle(self):
-        self.tree_df.to_pickle(self.cachepath)
-        print('saved tree_df.')
+        self.action_df.to_pickle(self.cachepath)
+        print('saved action_df.')
 
     def get_df(self):
-        return self.tree_df
+        return self.action_df
     
