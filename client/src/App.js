@@ -1,15 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import Layout from './components/Layout';
-import FetchData from './util/FetchData';
-import ForceDirectedGraph from './ForceDirectedGraph';
+import "./styles.css";
+import ForceGraph from "./ForceGraph";
 
-function App() {
-  return (
-    <ForceDirectedGraph/>
-    // <Layout/>
-    // <FetchData/>
-  );
+export default function App() {
+  return <ForceGraph />;
 }
-
-export default App;
