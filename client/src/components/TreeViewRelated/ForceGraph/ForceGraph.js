@@ -1,13 +1,12 @@
 import { useD3 } from "./useD3";
 import React, {useState} from "react";
 import * as d3 from "d3";
-import data from "./miserables";
 
 function clamp(x, lo, hi) {
   return x < lo ? lo : x > hi ? hi : x;
 }
 
-const ForceGraph = () => {
+const ForceGraph = ({data}) => {
   const width = 640; // outer width, in pixels
   const height = 400; // outer height, in pixels
   let nodes = data.nodes;
@@ -56,9 +55,10 @@ const ForceGraph = () => {
 
 
 
-      const link = g.selectAll(".link")
+    const link = g.selectAll(".link")
       .data(links)
       .join("line")
+      .attr("stroke", 'black')
       .classed("link", true);
     
     const node = g.selectAll(".node")

@@ -1,6 +1,5 @@
-import "./styles.css";
-import ForceGraph from "./ForceGraph";
+import TreeView from "./components/TreeViewRelated/TreeView/TreeView";
 
 export default function App() {
-  return <ForceGraph />;
+  return <TreeView/>
 }
