@@ -8,6 +8,7 @@ const TreeDiagram = ({ data }) => {
     const d3Container = useRef(null);
     const containerRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+    const [selNodeID, setSelNodeID] = useState([]);
 
     const colormap = {
       'advanced_search': 'red',
@@ -17,6 +18,10 @@ const TreeDiagram = ({ data }) => {
     }
 
     const [selNum, setSelNum] = useState(0);
+
+    useEffect(() => {
+      console.log("Selected Node IDs:", selNodeID);
+    }, [selNodeID]);
 
     useEffect(() => {
         if (containerRef.current) {
@@ -100,10 +105,10 @@ const TreeDiagram = ({ data }) => {
               .call(brush);
           
           function brushed({selection}){
-            console.log(selection)
             if(selection === null){
               circle.attr("fill", 'white')
               setSelNum(0);
+              setSelNodeID([]);
             }else{
               let [[x0, y0], [x1, y1]] = selection;
               circle.classed("selected", d => {
@@ -113,10 +118,14 @@ const TreeDiagram = ({ data }) => {
                     && y0 <= yCoord && yCoord <= y1;
               })
               circle.attr("fill", 'white')
+              const newSelNodeIDs = [];
               d3.selectAll('.selected')
                     .attr("fill", (d) => colormap[d.data.attributes.link_type])
-
-              console.log(d3.selectAll('.selected')['_groups'][0])
+                    .each(function(d){
+                      newSelNodeIDs.push(d.data.attributes.id);
+                    })
+              setSelNodeID(newSelNodeIDs);
+              
               setSelNum(d3.selectAll('.selected')['_groups'][0].length)
             }
           }
