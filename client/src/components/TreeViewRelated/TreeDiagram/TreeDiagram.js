@@ -7,6 +7,13 @@ const GROUP_NODE = -99
 const TreeDiagram = ({ data }) => {
     const d3Container = useRef(null);
 
+    const colormap = {
+      'advanced_search': 'red',
+      'cited_by': 'blue',
+      'same_author': 'green',
+      '': 'black'
+    }
+
     useEffect(() => {
         if (data && d3Container.current) {
             const margin = { top: 10, right: 120, bottom: 10, left: 40 },
@@ -42,7 +49,7 @@ const TreeDiagram = ({ data }) => {
                 .attr("class", "link")
                 .attr("d", drawlink)
                 .attr("opacity", (d) => d.parent.data.name == GROUP_NODE ? 0 : 1)
-                .attr("stroke", "black")
+                .attr("stroke", "lightgray")
                 .attr("fill", "none")
 
             // Nodes
@@ -51,6 +58,8 @@ const TreeDiagram = ({ data }) => {
                 .enter().append("g")
                 .attr("class", "node")
                 .attr("opacity", (d) => d.data.name == GROUP_NODE ? 0 : 1)
+                .attr("stroke", (d) => colormap[d.data.attributes.link_type])
+                .attr("fill", "white")
                 .attr("transform", function(d) { 
                     return "translate(" + d.y + "," + d.x + ")"; 
                 });
@@ -58,11 +67,11 @@ const TreeDiagram = ({ data }) => {
             node.append("circle")
                 .attr("r", 10);
 
-            node.append("text")
-                .attr("dy", ".35em")
-                .attr("x", d => d.children ? -13 : 13)
-                .style("text-anchor", d => d.children ? "end" : "start")
-                .text(d => d.data.name);
+            // node.append("text")
+            //     .attr("dy", ".35em")
+            //     .attr("x", d => d.children ? -13 : 13)
+            //     .style("text-anchor", d => d.children ? "end" : "start")
+            //     .text(d => d.data.name);
         }
     }, [data, d3Container.current]);
 
