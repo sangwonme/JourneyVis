@@ -4,11 +4,11 @@ import * as d3 from 'd3';
 
 const GROUP_NODE = -99
 
-const TreeDiagram = ({ data }) => {
+const TreeDiagram = ({ data, setSelNodeID }) => {
     const d3Container = useRef(null);
     const containerRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-    const [selNodeID, setSelNodeID] = useState([]);
+    
 
     const colormap = {
       'advanced_search': 'red',
@@ -19,9 +19,6 @@ const TreeDiagram = ({ data }) => {
 
     const [selNum, setSelNum] = useState(0);
 
-    useEffect(() => {
-      console.log("Selected Node IDs:", selNodeID);
-    }, [selNodeID]);
 
     useEffect(() => {
         if (containerRef.current) {
@@ -39,10 +36,10 @@ const TreeDiagram = ({ data }) => {
           const rootNum = root.children.length;
           
           // TODO
-          const margin = { top: 0, right: 120, bottom: 200, left: 0 },
+          const margin = { top: 0, right: 120, bottom: 0, left: 0 },
           width = dimensions.width - margin.left - margin.right,
-          height = 300*rootNum - margin.top - margin.bottom;
-          const tree = d3.tree().size([height/2, width]);
+          height = 100*rootNum - margin.top - margin.bottom;
+          const tree = d3.tree().size([height, width]);
           tree(root);
           
           const svg = d3.select(d3Container.current)
@@ -98,7 +95,7 @@ const TreeDiagram = ({ data }) => {
           const circle = d3.selectAll('circle');
           console.log(circle)
           const brush = d3.brush()
-                    .extent([[0, 0], [dimensions.width, dimensions.height]])
+                    .extent([[0, 0], [width+margin.right, height]])
                     .on("start brush end", brushed);
           svg.append('g')
               .attr('transform', `translate(${margin.top}, ${margin.left})`)
