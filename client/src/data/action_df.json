@@ -17,6 +17,7 @@
             47,
             48
         ],
+        "papers_num":9,
         "parent":null,
         "children":[
             2
@@ -36,6 +37,7 @@
         "searched_papers":[
             3
         ],
+        "papers_num":1,
         "parent":0,
         "children":[
 
@@ -56,6 +58,7 @@
             7,
             8
         ],
+        "papers_num":2,
         "parent":null,
         "children":[
             9
@@ -75,6 +78,7 @@
         "searched_papers":[
             10
         ],
+        "papers_num":1,
         "parent":6,
         "children":[
             11
@@ -94,6 +98,7 @@
         "searched_papers":[
             12
         ],
+        "papers_num":1,
         "parent":9,
         "children":[
 
@@ -113,6 +118,7 @@
         "searched_papers":[
             14
         ],
+        "papers_num":1,
         "parent":null,
         "children":[
             15,
@@ -133,6 +139,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":13,
         "children":[
 
@@ -152,6 +159,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":13,
         "children":[
             17
@@ -171,6 +179,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":16,
         "children":[
             18
@@ -190,6 +199,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":17,
         "children":[
             19
@@ -209,6 +219,7 @@
         "searched_papers":[
             20
         ],
+        "papers_num":1,
         "parent":18,
         "children":[
             21,
@@ -230,6 +241,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":19,
         "children":[
 
@@ -249,6 +261,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":19,
         "children":[
 
@@ -270,6 +283,7 @@
             25,
             26
         ],
+        "papers_num":3,
         "parent":19,
         "children":[
             27
@@ -289,6 +303,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":23,
         "children":[
             28
@@ -311,6 +326,7 @@
             31,
             32
         ],
+        "papers_num":4,
         "parent":27,
         "children":[
             33
@@ -330,6 +346,7 @@
         "searched_papers":[
             34
         ],
+        "papers_num":1,
         "parent":28,
         "children":[
             35
@@ -350,6 +367,7 @@
             36,
             37
         ],
+        "papers_num":2,
         "parent":33,
         "children":[
 
@@ -369,6 +387,7 @@
         "searched_papers":[
             39
         ],
+        "papers_num":1,
         "parent":null,
         "children":[
             40
@@ -388,6 +407,7 @@
         "searched_papers":[
 
         ],
+        "papers_num":0,
         "parent":38,
         "children":[
             41
@@ -407,6 +427,7 @@
         "searched_papers":[
             42
         ],
+        "papers_num":1,
         "parent":40,
         "children":[
 

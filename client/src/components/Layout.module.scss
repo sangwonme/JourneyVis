@@ -6,9 +6,18 @@ body{
   margin:0 ;
 }
 
+.header{
+  width: 100vw;
+  height: 10vh;
+  border-bottom: 1px solid $bordercolor;
+  @if($showLayout){
+    border: 3px solid red;
+  }
+}
+
 .layout{
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   box-sizing: border-box;
   @if($showLayout){

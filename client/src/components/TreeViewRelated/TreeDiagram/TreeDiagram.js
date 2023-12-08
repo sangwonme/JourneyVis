@@ -36,9 +36,9 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
           const rootNum = root.children.length;
           
           // TODO
-          const margin = { top: 0, right: 120, bottom: 0, left: 0 },
+          const margin = { top: 0, right: 120, bottom: 40, left: 0 },
           width = dimensions.width - margin.left - margin.right,
-          height = 120*rootNum - margin.top - margin.bottom;
+          height = 100*rootNum - margin.top - margin.bottom;
           const tree = d3.tree().size([height, width]);
           tree(root);
           
@@ -93,11 +93,20 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
 
           let sizeScale = d3.scaleLinear()
                             .domain([d3.min(paper_nums), d3.max(paper_nums)])
-                            .range([7, 25]);
+                            .range([7, 20]);
           
           node.append("circle")
               .attr("r", (d) => sizeScale(d.data.attributes.papers_num || 0));
 
+              node.append("text")
+                  .attr("dx", "0") // Offset the text a bit to the right of the circle
+                  .attr("dy", "3em") // Center the text vertically
+                  .text(function(d) {
+                      return d.data.attributes.id;
+                  })
+                  .style("font-size", "10px")
+                  .style("fill", "black")
+                  .attr('stroke', 'none')
           // brush
           const circle = d3.selectAll('circle');
           const brush = d3.brush()
@@ -116,7 +125,6 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
               let [[x0, y0], [x1, y1]] = selection;
               circle.classed("selected", d => {
                 let xCoord = d.y;
-                console.log(d)
                 let yCoord = d.x;
                 return x0 <= xCoord && xCoord <= x1
                     && y0 <= yCoord && yCoord <= y1;

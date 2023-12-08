@@ -3,6 +3,7 @@ import styles from './Layout.module.scss';
 import TreeDiagram from './TreeViewRelated/TreeDiagram/TreeDiagram';
 
 import action_graph from '../data/action_graph.json'
+import TreeReportView from './ReportViewRelated/TreeReportView/TreeReportView';
 
 const Layout = () => {
   const [selNodeID, setSelNodeID] = useState([]);
@@ -12,8 +13,11 @@ const Layout = () => {
   }, [selNodeID]);
 
   return ( <>
+  <div className={styles.header}></div>
   <div className={styles.layout}>
-    <div className={styles.left}></div>
+    <div className={styles.left}>
+      <TreeReportView selNodeID={selNodeID}/>
+    </div>
     <div className={styles.mid}>
       <div className={styles.midup}>
         <TreeDiagram data = {action_graph} setSelNodeID={setSelNodeID}/>
