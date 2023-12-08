@@ -53,18 +53,32 @@ const ForceGraph = ({data}) => {
       .attr("style", "background-color: white");
     // -------------------------------------------------------------------------------------
     // draw link and nodes
-    const link = g.selectAll(".link")
-    .data(links)
-    .join("line")
-    .attr("stroke", 'black')
-    .classed("link", true);
     
+    // Pre-calculate node positions
+    const initialNodePositions = calculateNodePositions(nodes, width, height);
+
+    // Update nodes data with pre-calculated positions
+    nodes.forEach((node, index) => {
+      node.x = initialNodePositions[index].x;
+      node.y = initialNodePositions[index].y;
+    });
+
+
+    const link = g.selectAll(".link")
+      .data(links)
+      .join("line")
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y)
+      .attr("stroke", 'black');
+
     const node = g.selectAll(".node")
-    .data(nodes)
-    .join("circle")
-    .attr("r", 12)
-    .classed("node", true)
-    .classed("fixed", (d) => d.fx !== undefined);
+      .data(nodes)
+      .join("circle")
+      .attr("cx", d => d.x)
+      .attr("cy", d => d.y)
+      .attr("r", 12);
     // svg.node();
     // -------------------------------------------------------------------------------------
     // color
@@ -116,23 +130,6 @@ const ForceGraph = ({data}) => {
         : value;
     }
 
-    // function dragstart() {
-    //   d3.select(this).classed("fixed", true);
-    // }
-
-    // function dragend(event, d) {
-    //   if (event.active) simulation.alphaTarget(0);
-    //   d.fx = null;
-    //   d.fy = null;
-    // }
-
-    // function dragged(event, d) {
-    //   d.fx = clamp(event.x, 0, width);
-    //   d.fy = clamp(event.y, 0, height);
-    //   simulation.alpha(1).restart();
-    // }
-
-
   function dragstart(event, d) {
     if (!event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
@@ -172,5 +169,21 @@ const ForceGraph = ({data}) => {
     </svg>
   );
 };
+
+// Function to calculate initial node positions
+function calculateNodePositions(nodes, width, height) {
+  // Implement your logic to calculate positions
+  // For example, arrange nodes in a grid or circle
+  return nodes.map((node, index) => {
+    // Simple example: arrange nodes in a circle
+    const angle = (index / nodes.length) * 2 * Math.PI;
+    const radius = Math.min(width, height) / 3;
+    return {
+      x: width / 2 + radius * Math.cos(angle),
+      y: height / 2 + radius * Math.sin(angle)
+    };
+  });
+}
+
 
 export default ForceGraph;

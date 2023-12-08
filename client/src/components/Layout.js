@@ -6,6 +6,10 @@ import action_data from '../data/action_df.json'
 import action_graph from '../data/action_graph.json'
 import TreeReportView from './ReportViewRelated/TreeReportView/TreeReportView';
 import SearchView from './SearchViewRelated/SearchView/SearchView';
+import ForceGraph from './TreeViewRelated/ForceGraph/ForceGraph';
+
+import data from '../data/data.json'
+import AdjMatrix from './ReportViewRelated/AdjMatrix/AdjMatrix';
 
 const Layout = () => {
   // select in TreeDiagram
@@ -49,6 +53,9 @@ const Layout = () => {
         <TreeDiagram 
           data = {action_graph} 
           setSelNodeID={setSelNodeID}/>
+      </div>
+      <div className={styles.middown}>
+        <AdjMatrix/>
       </div>
     </div>
     <div className={styles.right}>

@@ -10,7 +10,7 @@ const SearchView = ({selPaperID, filterPaperID, setFilterPaperID, visPaperID, se
   
   // refresh visPaperID whenever filterPaperID is updated
   useEffect(() => {
-    setVisPaperID(filterPaperID)
+    setVisPaperID([])
   }, [filterPaperID])
 
   const toggleChange = (id) => {
