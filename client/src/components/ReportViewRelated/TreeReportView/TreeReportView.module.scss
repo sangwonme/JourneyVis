@@ -43,11 +43,23 @@
       }
     }
   }
+
+  .paperList{
+    .papersNum{
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .paperContainer{
   border: 1px solid black;
   padding: 1rem;
+  margin-bottom: 1rem;
 
   .papertitle{
     font-weight: bold;

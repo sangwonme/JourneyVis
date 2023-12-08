@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './TreeReportView.module.scss';
 
 import action_data from '../../../data/action_df.json';
@@ -58,6 +58,11 @@ const NodeDescription = ({nodeID}) => {
   const papers_num = action.papers_num
   const searched_papers = action.searched_papers
 
+  const [toggle, setToggle] = useState(false);
+  const switchtoggle = () => {
+    setToggle(!toggle);
+  }
+
   console.log(papers_num)
 
   return (<>
@@ -80,7 +85,7 @@ const NodeDescription = ({nodeID}) => {
           <p className={styles.parentID}>This search action is driven from A{action.parent}</p>
         }
         <div className={styles.querycontainer}>
-          <p className={styles.querytype}>Query</p>
+          <p className={styles.querytype}>Search Keyword</p>
           <p className={styles.query}>{action.query}</p>
         </div>
         <div className={styles.querycontainer}>
@@ -90,6 +95,13 @@ const NodeDescription = ({nodeID}) => {
         </>
       }
     </div>
+    {
+    searched_papers && 
+    <div className={styles.paperList}>
+      <p className={styles.papersNum} onClick={switchtoggle}>▼ Total {searched_papers.length} paper found.</p>
+      {toggle && searched_papers.map(id => <PaperDescription paperID={id} />)}
+    </div>
+    }
   </div>
   </>);
 }
