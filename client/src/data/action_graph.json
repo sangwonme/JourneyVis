@@ -18,6 +18,7 @@
                         "searched_papers": [
                             3
                         ],
+                        "papers_num": 1,
                         "parent": 0,
                         "children": [],
                         "link_type": "cited_by",
@@ -46,6 +47,7 @@
                     47,
                     48
                 ],
+                "papers_num": 9,
                 "parent": "",
                 "children": [
                     2
@@ -76,6 +78,7 @@
                                 "searched_papers": [
                                     12
                                 ],
+                                "papers_num": 1,
                                 "parent": 9,
                                 "children": [],
                                 "link_type": "cited_by",
@@ -96,6 +99,7 @@
                         "searched_papers": [
                             10
                         ],
+                        "papers_num": 1,
                         "parent": 6,
                         "children": [
                             11
@@ -119,6 +123,7 @@
                     7,
                     8
                 ],
+                "papers_num": 2,
                 "parent": "",
                 "children": [
                     9
@@ -144,6 +149,7 @@
                         "authorID": "",
                         "url": "https://scholar.google.co.kr/scholar?cites=5321848940423579623&as_sdt=2005&sciodt=0,5&hl=ko",
                         "searched_papers": [],
+                        "papers_num": 0,
                         "parent": 13,
                         "children": [],
                         "link_type": "cited_by",
@@ -176,6 +182,7 @@
                                                         "authorID": "",
                                                         "url": "https://scholar.google.co.kr/scholar?cites=17752285616737220261&as_sdt=2005&sciodt=0,5&hl=ko",
                                                         "searched_papers": [],
+                                                        "papers_num": 0,
                                                         "parent": 19,
                                                         "children": [],
                                                         "link_type": "cited_by",
@@ -196,6 +203,7 @@
                                                         "authorID": "OkngbkkAAAAJ",
                                                         "url": "https://scholar.google.co.kr/citations?user=OkngbkkAAAAJ&hl=ko&oi=sra",
                                                         "searched_papers": [],
+                                                        "papers_num": 0,
                                                         "parent": 19,
                                                         "children": [],
                                                         "link_type": "same_author",
@@ -231,6 +239,7 @@
                                                                                             36,
                                                                                             37
                                                                                         ],
+                                                                                        "papers_num": 2,
                                                                                         "parent": 33,
                                                                                         "children": [],
                                                                                         "link_type": "cited_by",
@@ -251,6 +260,7 @@
                                                                                 "searched_papers": [
                                                                                     34
                                                                                 ],
+                                                                                "papers_num": 1,
                                                                                 "parent": 28,
                                                                                 "children": [
                                                                                     35
@@ -276,6 +286,7 @@
                                                                             31,
                                                                             32
                                                                         ],
+                                                                        "papers_num": 4,
                                                                         "parent": 27,
                                                                         "children": [
                                                                             33
@@ -296,6 +307,7 @@
                                                                 "authorID": "",
                                                                 "url": "https://scholar.google.co.kr/scholar?oi=bibs&hl=ko&cites=14002861277903846410",
                                                                 "searched_papers": [],
+                                                                "papers_num": 0,
                                                                 "parent": 23,
                                                                 "children": [
                                                                     28
@@ -320,6 +332,7 @@
                                                             25,
                                                             26
                                                         ],
+                                                        "papers_num": 3,
                                                         "parent": 19,
                                                         "children": [
                                                             27
@@ -342,6 +355,7 @@
                                                 "searched_papers": [
                                                     20
                                                 ],
+                                                "papers_num": 1,
                                                 "parent": 18,
                                                 "children": [
                                                     21,
@@ -364,6 +378,7 @@
                                         "authorID": "",
                                         "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=ASR&hl=ko&as_sdt=0,5",
                                         "searched_papers": [],
+                                        "papers_num": 0,
                                         "parent": 17,
                                         "children": [
                                             19
@@ -384,6 +399,7 @@
                                 "authorID": "",
                                 "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2019&q=ASR&btnG=",
                                 "searched_papers": [],
+                                "papers_num": 0,
                                 "parent": 16,
                                 "children": [
                                     18
@@ -404,6 +420,7 @@
                         "authorID": "",
                         "url": "https://scholar.google.co.kr/scholar?as_ylo=2019&q=speech+recognition&hl=ko&as_sdt=0,5",
                         "searched_papers": [],
+                        "papers_num": 0,
                         "parent": 13,
                         "children": [
                             17
@@ -426,6 +443,7 @@
                 "searched_papers": [
                     14
                 ],
+                "papers_num": 1,
                 "parent": "",
                 "children": [
                     15,
@@ -457,6 +475,7 @@
                                 "searched_papers": [
                                     42
                                 ],
+                                "papers_num": 1,
                                 "parent": 40,
                                 "children": [],
                                 "link_type": "advanced_search",
@@ -475,6 +494,7 @@
                         "authorID": "",
                         "url": "https://scholar.google.co.kr/scholar?cites=3097734008368961616&as_sdt=2005&sciodt=0,5&hl=ko",
                         "searched_papers": [],
+                        "papers_num": 0,
                         "parent": 38,
                         "children": [
                             41
@@ -497,6 +517,7 @@
                 "searched_papers": [
                     39
                 ],
+                "papers_num": 1,
                 "parent": "",
                 "children": [
                     40

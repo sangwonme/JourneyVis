@@ -60,6 +60,9 @@ class Action:
                         df.loc[df['id'] == current_id, 'parent'] = parent_id
                         df.loc[df['id'] == current_id, 'link_type'] = 'advanced_search'
                         df[df['id'] == parent_id].head(1).iloc[0]['children'].append(current_id)
+        # searched_paper num
+        df['papers_num'] = df['searched_papers'].apply(lambda x: len(x))
+        import pdb; pdb.set_trace()
         return df
 
     def save_pickle(self):

@@ -38,7 +38,7 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
           // TODO
           const margin = { top: 0, right: 120, bottom: 0, left: 0 },
           width = dimensions.width - margin.left - margin.right,
-          height = 100*rootNum - margin.top - margin.bottom;
+          height = 120*rootNum - margin.top - margin.bottom;
           const tree = d3.tree().size([height, width]);
           tree(root);
           
@@ -88,12 +88,18 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
                   return "translate(" + d.y + "," + d.x + ")"; 
               });
 
+          // node size
+          const paper_nums = root.descendants().map(d => (d.data.attributes.papers_num) || 0);
+
+          let sizeScale = d3.scaleLinear()
+                            .domain([d3.min(paper_nums), d3.max(paper_nums)])
+                            .range([7, 25]);
+          
           node.append("circle")
-              .attr("r", 10);
+              .attr("r", (d) => sizeScale(d.data.attributes.papers_num || 0));
 
           // brush
           const circle = d3.selectAll('circle');
-          console.log(circle)
           const brush = d3.brush()
                     .extent([[0, 0], [width+margin.right, height]])
                     .on("start brush end", brushed);
@@ -110,6 +116,7 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
               let [[x0, y0], [x1, y1]] = selection;
               circle.classed("selected", d => {
                 let xCoord = d.y;
+                console.log(d)
                 let yCoord = d.x;
                 return x0 <= xCoord && xCoord <= x1
                     && y0 <= yCoord && yCoord <= y1;
