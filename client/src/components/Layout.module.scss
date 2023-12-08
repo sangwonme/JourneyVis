@@ -1,20 +1,26 @@
 @import './global.scss';
 
-$showLayout: true;
+$showLayout: false;
+
+body{
+  margin:0 ;
+}
 
 .layout{
   width: 100vw;
   height: 100vh;
   display: flex;
+  box-sizing: border-box;
   @if($showLayout){
     border: 3px solid red;
-    box-sizing: border-box;
   }
 
 
   .left{
     width: 20%;
     height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid $bordercolor;
     @if($showLayout){
       border: 1px solid green;
       box-sizing: border-box;
@@ -26,6 +32,10 @@ $showLayout: true;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-right: 1px solid $bordercolor;
     @if($showLayout){
       border: 1px solid blue;
       box-sizing: border-box;
