@@ -85,7 +85,7 @@ const ForceGraph = ({data}) => {
       .force("charge", d3.forceManyBody())
       .force("center", d3.forceCenter(width / 2, height / 2))
       .on("tick", tick);
-    
+
     if (G)
         node.attr("fill", ({ index: i }) => {
       console.log("index: ", i);
@@ -116,22 +116,42 @@ const ForceGraph = ({data}) => {
         : value;
     }
 
-    function dragstart() {
-      d3.select(this).classed("fixed", true);
-    }
+    // function dragstart() {
+    //   d3.select(this).classed("fixed", true);
+    // }
 
-    function dragend(event, d) {
-      if (event.active) simulation.alphaTarget(0);
-      d.fx = null;
-      d.fy = null;
-    }
+    // function dragend(event, d) {
+    //   if (event.active) simulation.alphaTarget(0);
+    //   d.fx = null;
+    //   d.fy = null;
+    // }
 
-    function dragged(event, d) {
-      d.fx = clamp(event.x, 0, width);
-      d.fy = clamp(event.y, 0, height);
-      simulation.alpha(1).restart();
-    }
+    // function dragged(event, d) {
+    //   d.fx = clamp(event.x, 0, width);
+    //   d.fy = clamp(event.y, 0, height);
+    //   simulation.alpha(1).restart();
+    // }
+
+
+  function dragstart(event, d) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+  
+  function dragged(event, d) {
+    d.fx = clamp(event.x, 0, width);
+    d.fy = clamp(event.y, 0, height);
+  }
+  
+  function dragend(event, d) {
+    if (!event.active) simulation.alphaTarget(0);
+    // Optionally, uncomment the following lines if you want nodes to be fixed at their new position after dragging:
+    // d.fx = null;
+    // d.fy = null;
+  }
   });
+
 // -------------------------------------------------------------------------------------
 
   return (

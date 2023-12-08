@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './TreeView.module.scss';
-import data from '../../../data/miserables.json'
-import ForceGraph from '../ForceGraph/ForceGraph';
+import data from '../../../data/actionTree.json'
+import TreeDiagram from '../TreeDiagram/TreeDiagram';
 
 const TreeView = () => {
   return ( <>
-    <ForceGraph data={data}/>
+    <TreeDiagram data={data[2]}/>
   </> );
 }
  
