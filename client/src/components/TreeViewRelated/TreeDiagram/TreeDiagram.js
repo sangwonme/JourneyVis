@@ -1,5 +1,8 @@
 import React, { useRef, useEffect } from 'react';
+import styles from './TreeDiagram.module.scss';
 import * as d3 from 'd3';
+
+const GROUP_NODE = -99
 
 const TreeDiagram = ({ data }) => {
     const d3Container = useRef(null);
@@ -18,7 +21,7 @@ const TreeDiagram = ({ data }) => {
             const svg = d3.select(d3Container.current)
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
-              .append("g")
+                .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
             // Links
@@ -32,11 +35,13 @@ const TreeDiagram = ({ data }) => {
                     ${sy*(1/2)+ey*(1/2)},${ex}  
                     ${ey},${ex}`;
             }
+
             svg.selectAll(".link")
                 .data(root.descendants().slice(1))
                 .enter().append("path")
                 .attr("class", "link")
                 .attr("d", drawlink)
+                .attr("opacity", (d) => d.parent.data.name == GROUP_NODE ? 0 : 1)
                 .attr("stroke", "black")
                 .attr("fill", "none")
 
@@ -45,6 +50,7 @@ const TreeDiagram = ({ data }) => {
                 .data(root.descendants())
                 .enter().append("g")
                 .attr("class", "node")
+                .attr("opacity", (d) => d.data.name == GROUP_NODE ? 0 : 1)
                 .attr("transform", function(d) { 
                     return "translate(" + d.y + "," + d.x + ")"; 
                 });
