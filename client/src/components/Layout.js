@@ -8,9 +8,14 @@ import TreeReportView from './ReportViewRelated/TreeReportView/TreeReportView';
 import SearchView from './SearchViewRelated/SearchView/SearchView';
 
 const Layout = () => {
+  // select in TreeDiagram
   const [selNodeID, setSelNodeID] = useState([]);
+  // select whenever selNodeID is updated
   const [selPaperID, setSelPaperID] = useState([]);
+  // filter in SearchView > SearchPanel
   const [filterPaperID, setFilterPaperID] = useState([]);
+  // sel in SearchView (by click)
+  const [visPaperID, setVisPaperID] = useState([]);
 
   // update selected paper IDs
   let newSelPaperID = [];
@@ -28,14 +33,6 @@ const Layout = () => {
       setSelPaperID([])
     }
   }, [selNodeID])
-
-  // useEffect(() => {
-  //   console.log('papers: ' + selPaperID)
-  // }, [selPaperID])
-
-  useEffect(() => {
-    console.log('papers: ' + filterPaperID)
-  }, [filterPaperID])
 
   return ( <>
   <div className={styles.header}>
@@ -59,6 +56,8 @@ const Layout = () => {
         selPaperID={selPaperID}
         filterPaperID={filterPaperID}
         setFilterPaperID={setFilterPaperID}
+        visPaperID={visPaperID}
+        setVisPaperID={setVisPaperID}
         />
     </div>
   </div>
