@@ -3,14 +3,16 @@ import * as d3 from 'd3';
 
 // import data from '../../../data/data.json'
 
-// Sample categories
-const categories = ['Category A', 'Category B', 'Category C'];
+const categories = ['Category A', 'Category B', 'Category C', 'Category D', 'Category E', 'Category F', 'Category G'];
 
-// Sample data
 const data = [
-  { index: 0, 'Category A': 10, 'Category B': 5, 'Category C': 2 },
-  { index: 1, 'Category A': 3, 'Category B': 8, 'Category C': 7 },
-  { index: 2, 'Category A': 6, 'Category B': 1, 'Category C': 4 }
+  { index: 0, 'Category A': 10, 'Category B': 5, 'Category C': 2, 'Category D': 3, 'Category E': 4, 'Category F': 8, 'Category G': 6 },
+  { index: 1, 'Category A': 3, 'Category B': 8, 'Category C': 7, 'Category D': 5, 'Category E': 6, 'Category F': 2, 'Category G': 1 },
+  { index: 2, 'Category A': 6, 'Category B': 1, 'Category C': 4, 'Category D': 7, 'Category E': 8, 'Category F': 3, 'Category G': 2 },
+  { index: 3, 'Category A': 2, 'Category B': 4, 'Category C': 8, 'Category D': 6, 'Category E': 1, 'Category F': 7, 'Category G': 5 },
+  { index: 4, 'Category A': 1, 'Category B': 7, 'Category C': 3, 'Category D': 2, 'Category E': 5, 'Category F': 6, 'Category G': 4 },
+  { index: 5, 'Category A': 7, 'Category B': 2, 'Category C': 6, 'Category D': 1, 'Category E': 3, 'Category F': 4, 'Category G': 8 },
+  { index: 6, 'Category A': 4, 'Category B': 6, 'Category C': 5, 'Category D': 8, 'Category E': 2, 'Category F': 1, 'Category G': 7 }
 ];
 
 
@@ -42,8 +44,13 @@ const AdjMatrix = () => {
 
       const xAxis = g => g
         .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x).tickFormat((d, i) => categories[i]));
-
+        .call(d3.axisBottom(x).tickFormat((d, i) => categories[i]))
+        .selectAll("text")
+        .style("text-anchor", "end") // Adjust the anchor to the end for better alignment
+        .attr("dx", "-.8em") // Adjust these values as needed for your layout
+        .attr("dy", ".15em") // Adjust these values as needed for your layout
+        .attr("transform", "rotate(-45)"); // Rotate the labels by 45 degrees
+      
       const yAxis = g => g
         .call(d3.axisLeft(y).tickFormat((d, i) => categories[i]));
 
