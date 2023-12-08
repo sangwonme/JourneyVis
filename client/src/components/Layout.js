@@ -38,7 +38,10 @@ const Layout = () => {
   }, [filterPaperID])
 
   return ( <>
-  <div className={styles.header}></div>
+  <div className={styles.header}>
+    <p className={styles.projecttitle}>JourneyVis</p>
+    <p className={styles.team}>김민지 박상원 서현아</p>
+  </div>
   <div className={styles.layout}>
     <div className={styles.left}>
       <TreeReportView 

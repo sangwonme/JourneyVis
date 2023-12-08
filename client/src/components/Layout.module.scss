@@ -13,6 +13,21 @@ body{
   @if($showLayout){
     border: 3px solid red;
   }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .projecttitle{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+  }
+  .team{
+    font-size: 0.8rem;
+    margin: 0;
+  }
 }
 
 .layout{
