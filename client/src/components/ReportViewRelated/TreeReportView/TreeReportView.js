@@ -14,7 +14,6 @@ const PaperDescription = ({paperID}) => {
   const year = paper.year
   const citation = paper.citation
   const url = paper.url
-  console.log(typeof(author_list))
 
     // Step 1: Remove the leading and trailing single quotes
   const cleanedStr = author_list.slice(2, -2);
@@ -63,7 +62,6 @@ const NodeDescription = ({nodeID}) => {
     setToggle(!toggle);
   }
 
-  console.log(papers_num)
 
   return (<>
   <div className={styles.nodeContainer}>
@@ -98,7 +96,7 @@ const NodeDescription = ({nodeID}) => {
     {
     searched_papers && 
     <div className={styles.paperList}>
-      <p className={styles.papersNum} onClick={switchtoggle}>▼ Total {searched_papers.length} paper found.</p>
+      <p className={styles.papersNum} onClick={switchtoggle}>{!toggle? '▶️': '▼'} Total {searched_papers.length} paper found.</p>
       {toggle && searched_papers.map(id => <PaperDescription paperID={id} />)}
     </div>
     }
@@ -109,6 +107,7 @@ const NodeDescription = ({nodeID}) => {
 const TreeReportView = ({selNodeID}) => {
 
   return ( <>
+  <h2>Search Action History</h2>
   <div className={styles.container}>
     {
       selNodeID.length > 0 &&
