@@ -529,5 +529,21 @@
             }
         }
     ],
-    "attributes": {}
+    "attributes": {
+        "id": "-1",
+        "query": "",
+        "startYear": "",
+        "endYear": "",
+        "citedBy": "",
+        "authorID": "",
+        "url": "",
+        "searched_papers": [],
+        "papers_num": 0,
+        "parent": 0,
+        "children": [],
+        "link_type": "",
+        "seedpaper_id": "",
+        "Timestamp": "",
+        "Timestamp_end": ""
+    }
 }

@@ -1,6 +1,83 @@
 @import '../../global.scss';
 
+
+
+.nodeContainer{
+  width: 90%;
+  margin: 0 auto;
+
+  .title{
+    width: 100%;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .actionDesc{
+    width: 100%;
+
+    .relation{
+      font-style: italic;
+      font-weight: bold;
+      margin: 0;
+    }
+    .parentID{
+      margin: 0;
+      font-weight: bold;
+    }
+    .querycontainer{
+      margin: 0;
+      .querytype{
+        color: gray;
+        font-size: 0.8rem;
+        margin: 0;
+        margin-top: 0.5rem;
+      }
+      .query{
+        margin: 0;
+
+      }
+    }
+  }
+}
+
+.paperContainer{
+  border: 1px solid black;
+  padding: 1rem;
+
+  .papertitle{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: black;
+    margin: 10px 0;
+  }
+  .author{
+    margin-right: 0.3rem;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+  .metadata{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+
+    .nonlink{
+      display: flex;
+    }
+
+    .url{
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  }
+}
 .container{
   width: 100%;
   height: 100%;
+  overflow: scroll;
 }

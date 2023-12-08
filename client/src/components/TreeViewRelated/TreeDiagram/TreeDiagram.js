@@ -102,7 +102,7 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
                   .attr("dx", "0") // Offset the text a bit to the right of the circle
                   .attr("dy", "3em") // Center the text vertically
                   .text(function(d) {
-                      return d.data.attributes.id;
+                      return 'A'+d.data.attributes.id;
                   })
                   .style("font-size", "10px")
                   .style("fill", "black")
