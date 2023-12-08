@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './TreeView.module.scss';
-import data from '../../../data/actionTree.json'
+import data from '../../../data/action_graph.json'
 import TreeDiagram from '../TreeDiagram/TreeDiagram';
 
 const TreeView = () => {
   return ( <>
-    <TreeDiagram data={data[2]}/>
+    <TreeDiagram data={data}/>
   </> );
 }
  

@@ -7,6 +7,7 @@ from modules.action import Action
 from modules.paper import Paper
 from modules.similarity import Similarity
 from modules.graph import Graph
+from modules.tree import Tree
 from modules.json_converter import JSONConverter
 
 class DataManager:
@@ -20,15 +21,15 @@ class DataManager:
         self.paper_df = self.paper.get_df()
         # create tree DB
         self.action = Action(self.data)
-        import pdb; pdb.set_trace()
         self.action_df = self.compress_df(self.action.get_df()) #compress after retreiving the df
         self.action_df = self.action_df[self.action_df['logtype'] == 'action']
         self.action_df = self.action_df.loc[:, ['id', 'query', 'startYear', 'endYear', 'citedBy', 'authorID', 'url', 'searched_papers', 'parent', 'children', 'link_type', 'seedpaper_id', 'Timestamp', 'Timestamp_end']]
+        self.action_tree = Tree.makeTree(self.action_df)
         # create Similarity object
         self.sm = Similarity()
         self.sim_mat = self.get_similarity_btw_papers(self.paper_df.index)
         # create Action Graph
-        self.action_graph = Graph.create_action_graph(self.action_df)
+        # self.action_graph = Graph.create_action_graph(self.action_df)
         
     
     def get_similarity_btw_papers(self, paper_list, title_weight=0.8):
@@ -43,9 +44,9 @@ class DataManager:
         BASE_URL = './data_output'
         JSONConverter.df_to_json(self.paper_df.set_index('id').drop('html', axis=1), os.path.join(BASE_URL, 'paper_df.json'))
         JSONConverter.df_to_json(self.action_df.set_index('id'), os.path.join(BASE_URL, 'action_df.json'))
-        JSONConverter.dict_to_json(self.action_graph, os.path.join(BASE_URL, 'action_graph.json'))
+        JSONConverter.dict_to_json(self.action_tree, os.path.join(BASE_URL, 'action_graph.json'))
         JSONConverter.np_to_json(self.sim_mat, os.path.join(BASE_URL, 'sim_mat.json'))
-
+        
     # give id for every papers and actions considering redundant datas
     @staticmethod
     def create_id(csv_data):
