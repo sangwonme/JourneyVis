@@ -22,7 +22,7 @@ const SearchPanel = ({ selPaperID, setFilterPaperID }) => {
       })
       setFilterPaperID(newFilterPaperID);
     }, [searchTerm])
-
+    
     // refresh search logic
     useEffect(() => {
       setFilterPaperID(selPaperID);

@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 
 const GROUP_NODE = -99
 
-const TreeDiagram = ({ data, setSelNodeID }) => {
+const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
     const d3Container = useRef(null);
     const containerRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -19,6 +19,7 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
 
     const [selNum, setSelNum] = useState(0);
 
+    const brushRef = useRef(); 
 
     useEffect(() => {
         if (containerRef.current) {
@@ -107,40 +108,54 @@ const TreeDiagram = ({ data, setSelNodeID }) => {
                   .style("font-size", "10px")
                   .style("fill", "black")
                   .attr('stroke', 'none')
+
+
+          // Initialize the brush only once and store it in the brushRef
+          if (!brushRef.current) {
+            brushRef.current = d3.brush()
+                .extent([[0, 0], [width+margin.right, height]])
+                .on("start brush end", brushed);
+          }
+
+          svg.append('g')
+            .attr('transform', `translate(${margin.top}, ${margin.left})`)
+            .call(brushRef.current); // Use the brushRef here
+
           // brush
           const circle = d3.selectAll('circle');
-          const brush = d3.brush()
-                    .extent([[0, 0], [width+margin.right, height]])
-                    .on("start brush end", brushed);
-          svg.append('g')
-              .attr('transform', `translate(${margin.top}, ${margin.left})`)
-              .call(brush);
           
-          function brushed({selection}){
-            if(selection === null){
-              circle.attr("fill", 'white')
-              setSelNum(0);
-              setSelNodeID([]);
-            }else{
+          function brushed({ selection }) {
+            if (selection === null) {
+              if (selNum !== 0) setSelNum(0);
+              if (selNodeID.length !== 0) setSelNodeID([]);
+            } else {
               let [[x0, y0], [x1, y1]] = selection;
+              const newSelNodeIDs = [];
               circle.classed("selected", d => {
                 let xCoord = d.y;
                 let yCoord = d.x;
                 return x0 <= xCoord && xCoord <= x1
                     && y0 <= yCoord && yCoord <= y1;
-              })
+              });
               circle.attr("fill", 'white')
-              const newSelNodeIDs = [];
               d3.selectAll('.selected')
-                    .attr("fill", (d) => colormap[d.data.attributes.link_type])
-                    .each(function(d){
-                      newSelNodeIDs.push(d.data.attributes.id);
-                    })
-              setSelNodeID(newSelNodeIDs);
+                .attr("fill", (d) => colormap[d.data.attributes.link_type])
+                .each(function(d){
+                  newSelNodeIDs.push(d.data.attributes.id);
+                });
               
-              setSelNum(d3.selectAll('.selected')['_groups'][0].length)
+              if (JSON.stringify(newSelNodeIDs) !== JSON.stringify(selNodeID)) {
+                console.log(selNodeID)
+                setSelNodeID(newSelNodeIDs);
+              }
+              
+              const newSelNum = d3.selectAll('.selected').size();
+              if (newSelNum !== selNum) {
+                setSelNum(newSelNum);
+              }
             }
           }
+          
 
         }
     }, [data, d3Container.current, dimensions]);

@@ -10,6 +10,7 @@ import ForceGraph from './TreeViewRelated/ForceGraph/ForceGraph';
 
 import data from '../data/data.json'
 import AdjMatrix from './ReportViewRelated/AdjMatrix/AdjMatrix';
+import WordCloud from './ReportViewRelated/WordCloud/WordCloud';
 
 const Layout = () => {
   // select in TreeDiagram
@@ -38,6 +39,10 @@ const Layout = () => {
     }
   }, [selNodeID])
 
+  useEffect(() => {
+    console.log(visPaperID)
+  }, [visPaperID])
+
   return ( <>
   <div className={styles.header}>
     <p className={styles.projecttitle}>JourneyVis</p>
@@ -52,10 +57,12 @@ const Layout = () => {
       <div className={styles.midup}>
         <TreeDiagram 
           data = {action_graph} 
+          selNodeID={selNodeID}
           setSelNodeID={setSelNodeID}/>
       </div>
       <div className={styles.middown}>
         <AdjMatrix/>
+        <WordCloud visPaperID={visPaperID}/>
       </div>
     </div>
     <div className={styles.right}>
