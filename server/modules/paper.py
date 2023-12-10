@@ -23,8 +23,10 @@ class Paper:
             # TODO : Augment data
             for idx, row in tmp.iterrows():
                 title = row['title']
+                print(title)
                 if title not in self.paper_df['title'].values:
-                    self.paper_df.append(row)
+                    self.paper_df = self.paper_df._append(row)
+                    print('appended')
         except:
             # add columns
             self.paper_df = tmp
@@ -98,7 +100,7 @@ class Paper:
     @staticmethod
     def call_api(title):
         params = {
-                'api_key': 'C60D1B45EB5C4306963C40DA05C12D08',
+                'api_key': 'D1CCC9E99F4A4F01931C43E14ECC08BF',
                 'search_type': 'scholar',
                 'q': title,
                 'include_html': 'true'

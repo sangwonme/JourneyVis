@@ -17,6 +17,7 @@ class DataManager:
         paper_input = self.compress_df(self.data)
         paper_input = paper_input[paper_input['logtype'] == 'paper']
         paper_input = paper_input.loc[:,['id', 'title', 'Timestamp', 'Timestamp_end']]
+        import pdb; pdb.set_trace()
         self.paper = Paper(paper_input)
         self.paper_df = self.paper.get_df()
         # create tree DB

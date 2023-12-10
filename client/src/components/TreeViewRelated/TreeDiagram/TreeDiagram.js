@@ -3,10 +3,11 @@ import styles from './TreeDiagram.module.scss';
 import * as d3 from 'd3';
 
 import paper_data from '../../../data/paper_df.json';
+import action_graph from '../../../data/action_graph.json'
 
 const GROUP_NODE = -99
 
-const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
+const TreeDiagram = ({selNodeID, setSelNodeID }) => {
     const d3Container = useRef(null);
     const containerRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -22,6 +23,8 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
 
     const brushRef = useRef(); 
 
+    const data = action_graph;
+
     useEffect(() => {
         if (containerRef.current) {
             // Get the dimensions of the parent div
@@ -31,6 +34,7 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
     }, []);
 
     useEffect(() => {
+      console.log('called')
         if (data && d3Container.current && dimensions.width && dimensions.height) {
           
           const root = d3.hierarchy(data, d => d.children);
@@ -169,7 +173,7 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
           
 
         }
-    }, [data, d3Container.current, dimensions]);
+    }, [d3Container.current]);
 
     return (
       <div ref={containerRef} style={{width: '100%', height: '100%'}}>

@@ -3,7 +3,6 @@ import styles from './Layout.module.scss';
 import TreeDiagram from './TreeViewRelated/TreeDiagram/TreeDiagram';
 
 import action_data from '../data/action_df.json'
-import action_graph from '../data/action_graph.json'
 import TreeReportView from './ReportViewRelated/TreeReportView/TreeReportView';
 import SearchView from './SearchViewRelated/SearchView/SearchView';
 import ForceGraph from './TreeViewRelated/ForceGraph/ForceGraph';
@@ -51,7 +50,6 @@ const Layout = () => {
     <div className={styles.mid}>
       <div className={styles.midup}>
         <TreeDiagram 
-          data = {action_graph} 
           selNodeID={selNodeID}
           setSelNodeID={setSelNodeID}/>
       </div>
