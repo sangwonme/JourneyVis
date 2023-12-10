@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useMemo, useState } from 'react';
 import * as d3 from 'd3';
 import cloud from 'd3-cloud';
+import seedrandom from 'seedrandom';
 
 import paper_data from '../../../data/paper_df.json'
 
@@ -40,6 +41,8 @@ const WordCloud = ({visPaperID}) => {
 
     const words = getWordFrequencies(longText)
 
+    Math.random = seedrandom('myrandomseed');
+
     const sizeScale = d3.scaleLinear()
       .domain([d3.min(words, w => w.size), d3.max(words, w => w.size)])
       .range([10, 100]); // Set min and max font size
@@ -51,6 +54,7 @@ const WordCloud = ({visPaperID}) => {
       .rotate(0)
       .font("Impact")
       .fontSize(d => d.size)
+      .random(Math.random)
       .on("end", draw);
 
     layout.start();
