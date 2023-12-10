@@ -26,12 +26,19 @@ const SearchView = ({selPaperID, filterPaperID, setFilterPaperID, visPaperID, se
     });
   };
 
+  const toggleAll = () => {
+    setVisPaperID(visPaperID.length == 0? filterPaperID : []);
+  }
+
   return ( <>
   <h2>Searched Papers</h2>
   <p className={styles.papernum}>Total {selPaperID.length} papers found</p>
-  <SearchPanel
-    selPaperID={selPaperID}
-    setFilterPaperID={setFilterPaperID}/>
+  <div className={styles.filtercontrol}>
+    <SearchPanel
+      selPaperID={selPaperID}
+      setFilterPaperID={setFilterPaperID}/>
+    <button onClick={toggleAll}>{visPaperID.length != 0 ?'Unelect All' : 'Select All'}</button>
+  </div>
   <div className={styles.paperlist}>
     {
       filterPaperID &&

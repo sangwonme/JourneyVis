@@ -108,12 +108,12 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
                     // text label of nodes
                     const link_type = d.data.attributes.link_type
                     if(link_type == 'same_author'){
-                      return '🧑‍🏫\n' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
+                      return 'A' + d.data.attributes.id + ":" + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
                     }
                     else if(link_type == 'cited_by'){
-                      return '💬\n' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
+                      return 'A' + d.data.attributes.id + ":" + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
                     }else{
-                      return '🔎\n' + d.data.attributes.query.slice(0, 3) + '...'
+                      return 'A' + d.data.attributes.id + ":" + d.data.attributes.query.slice(0, 3) + '...'
                     }
                   })
                   .style("font-size", "10px")
