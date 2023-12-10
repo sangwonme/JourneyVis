@@ -245,7 +245,7 @@
                                                                                         "link_type": "cited_by",
                                                                                         "seedpaper_id": 34,
                                                                                         "Timestamp": "2023-11-19T05:59:07.859Z",
-                                                                                        "Timestamp_end": "2023-11-19T05:59:28.536Z"
+                                                                                        "Timestamp_end": "2023-11-20T13:41:54.205Z"
                                                                                     }
                                                                                 }
                                                                             ],
@@ -340,14 +340,14 @@
                                                         "link_type": "same_author",
                                                         "seedpaper_id": 20,
                                                         "Timestamp": "2023-11-19T05:57:38.089Z",
-                                                        "Timestamp_end": "2023-11-19T05:57:53.661Z"
+                                                        "Timestamp_end": "2023-11-20T13:51:47.866Z"
                                                     }
                                                 }
                                             ],
                                             "attributes": {
                                                 "id": 19,
                                                 "query": "automatic speech recognition",
-                                                "startYear": 2022.0,
+                                                "startYear": "2022",
                                                 "endYear": "",
                                                 "citedBy": "",
                                                 "authorID": "",
@@ -372,7 +372,7 @@
                                     "attributes": {
                                         "id": 18,
                                         "query": "ASR",
-                                        "startYear": 2022.0,
+                                        "startYear": "2022",
                                         "endYear": "",
                                         "citedBy": "",
                                         "authorID": "",
@@ -393,7 +393,7 @@
                             "attributes": {
                                 "id": 17,
                                 "query": "ASR",
-                                "startYear": 2019.0,
+                                "startYear": "2019",
                                 "endYear": "",
                                 "citedBy": "",
                                 "authorID": "",
@@ -414,7 +414,7 @@
                     "attributes": {
                         "id": 16,
                         "query": "speech recognition",
-                        "startYear": 2019.0,
+                        "startYear": "2019",
                         "endYear": "",
                         "citedBy": "",
                         "authorID": "",
@@ -452,7 +452,7 @@
                 "link_type": "",
                 "seedpaper_id": "",
                 "Timestamp": "2023-11-19T05:55:23.330Z",
-                "Timestamp_end": "2023-11-19T05:56:34.054Z"
+                "Timestamp_end": "2023-11-20T13:47:21.632Z"
             }
         },
         {
@@ -467,7 +467,7 @@
                             "attributes": {
                                 "id": 41,
                                 "query": "",
-                                "startYear": 2022.0,
+                                "startYear": "2022",
                                 "endYear": "",
                                 "citedBy": "3097734008368961616",
                                 "authorID": "",
@@ -481,7 +481,7 @@
                                 "link_type": "advanced_search",
                                 "seedpaper_id": "",
                                 "Timestamp": "2023-11-19T05:59:43.828Z",
-                                "Timestamp_end": "2023-11-19T05:59:52.646Z"
+                                "Timestamp_end": "2023-11-20T13:47:52.069Z"
                             }
                         }
                     ],
@@ -526,6 +526,284 @@
                 "seedpaper_id": "",
                 "Timestamp": "2023-11-19T05:59:35.191Z",
                 "Timestamp_end": "2023-11-19T05:59:39.506Z"
+            }
+        },
+        {
+            "name": 49,
+            "children": [],
+            "attributes": {
+                "id": 49,
+                "query": "Relationship between language development and watching tv among infants and toddlers.",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=Relationship+between+language+development+and+watching+tv+among+infants+and+toddlers.&btnG=",
+                "searched_papers": [
+                    50,
+                    51
+                ],
+                "papers_num": 2,
+                "parent": "",
+                "children": [],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-21T04:27:14.974Z",
+                "Timestamp_end": "2023-11-21T04:27:14.974Z"
+            }
+        },
+        {
+            "name": 52,
+            "children": [
+                {
+                    "name": 58,
+                    "children": [
+                        {
+                            "name": 60,
+                            "children": [
+                                {
+                                    "name": 62,
+                                    "children": [],
+                                    "attributes": {
+                                        "id": 62,
+                                        "query": "",
+                                        "startYear": "",
+                                        "endYear": "",
+                                        "citedBy": "9345696559280297687",
+                                        "authorID": "",
+                                        "url": "https://scholar.google.co.kr/scholar?cites=9345696559280297687&as_sdt=2005&sciodt=0,5&hl=ko",
+                                        "searched_papers": [],
+                                        "papers_num": 0,
+                                        "parent": 60,
+                                        "children": [],
+                                        "link_type": "cited_by",
+                                        "seedpaper_id": 61,
+                                        "Timestamp": "2023-12-10T14:16:51.821Z",
+                                        "Timestamp_end": "2023-12-10T14:16:51.821Z"
+                                    }
+                                },
+                                {
+                                    "name": 63,
+                                    "children": [
+                                        {
+                                            "name": 65,
+                                            "children": [],
+                                            "attributes": {
+                                                "id": 65,
+                                                "query": "",
+                                                "startYear": "",
+                                                "endYear": "",
+                                                "citedBy": "7230362880510128041",
+                                                "authorID": "",
+                                                "url": "https://scholar.google.co.kr/scholar?cites=7230362880510128041&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                "searched_papers": [
+                                                    66,
+                                                    67
+                                                ],
+                                                "papers_num": 2,
+                                                "parent": 63,
+                                                "children": [],
+                                                "link_type": "cited_by",
+                                                "seedpaper_id": 64,
+                                                "Timestamp": "2023-12-10T14:17:16.331Z",
+                                                "Timestamp_end": "2023-12-10T14:17:30.333Z"
+                                            }
+                                        },
+                                        {
+                                            "name": 69,
+                                            "children": [
+                                                {
+                                                    "name": 72,
+                                                    "children": [],
+                                                    "attributes": {
+                                                        "id": 72,
+                                                        "query": "",
+                                                        "startYear": "",
+                                                        "endYear": "",
+                                                        "citedBy": "16663225795066109593",
+                                                        "authorID": "",
+                                                        "url": "https://scholar.google.co.kr/scholar?cites=16663225795066109593&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                        "searched_papers": [],
+                                                        "papers_num": 0,
+                                                        "parent": 69,
+                                                        "children": [],
+                                                        "link_type": "cited_by",
+                                                        "seedpaper_id": 71,
+                                                        "Timestamp": "2023-12-10T14:18:01.777Z",
+                                                        "Timestamp_end": "2023-12-10T14:18:01.777Z"
+                                                    }
+                                                }
+                                            ],
+                                            "attributes": {
+                                                "id": 69,
+                                                "query": "graph construction",
+                                                "startYear": "2022",
+                                                "endYear": "",
+                                                "citedBy": "",
+                                                "authorID": "",
+                                                "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=graph+construction&hl=ko&as_sdt=0,5",
+                                                "searched_papers": [
+                                                    70,
+                                                    71
+                                                ],
+                                                "papers_num": 2,
+                                                "parent": 63,
+                                                "children": [
+                                                    72
+                                                ],
+                                                "link_type": "advanced_search",
+                                                "seedpaper_id": "",
+                                                "Timestamp": "2023-12-10T14:17:39.354Z",
+                                                "Timestamp_end": "2023-12-10T14:18:00.064Z"
+                                            }
+                                        }
+                                    ],
+                                    "attributes": {
+                                        "id": 63,
+                                        "query": "graph construction",
+                                        "startYear": "",
+                                        "endYear": "",
+                                        "citedBy": "5856182221416152353",
+                                        "authorID": "",
+                                        "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=5856182221416152353&scipsc=&q=graph+construction&btnG=",
+                                        "searched_papers": [
+                                            64,
+                                            68
+                                        ],
+                                        "papers_num": 2,
+                                        "parent": 60,
+                                        "children": [
+                                            65,
+                                            69
+                                        ],
+                                        "link_type": "advanced_search",
+                                        "seedpaper_id": "",
+                                        "Timestamp": "2023-12-10T14:17:07.597Z",
+                                        "Timestamp_end": "2023-12-10T14:17:37.145Z"
+                                    }
+                                }
+                            ],
+                            "attributes": {
+                                "id": 60,
+                                "query": "",
+                                "startYear": "",
+                                "endYear": "",
+                                "citedBy": "5856182221416152353",
+                                "authorID": "",
+                                "url": "https://scholar.google.co.kr/scholar?cites=5856182221416152353&as_sdt=2005&sciodt=0,5&hl=ko",
+                                "searched_papers": [
+                                    61
+                                ],
+                                "papers_num": 1,
+                                "parent": 58,
+                                "children": [
+                                    62,
+                                    63
+                                ],
+                                "link_type": "cited_by",
+                                "seedpaper_id": 59,
+                                "Timestamp": "2023-12-10T14:16:41.700Z",
+                                "Timestamp_end": "2023-12-10T14:16:54.740Z"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "id": 58,
+                        "query": "prompt to graph generation",
+                        "startYear": "2022",
+                        "endYear": "",
+                        "citedBy": "",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=prompt+to+graph+generation&hl=ko&as_sdt=0,5",
+                        "searched_papers": [
+                            59
+                        ],
+                        "papers_num": 1,
+                        "parent": 52,
+                        "children": [
+                            60
+                        ],
+                        "link_type": "advanced_search",
+                        "seedpaper_id": "",
+                        "Timestamp": "2023-12-10T14:16:26.465Z",
+                        "Timestamp_end": "2023-12-10T14:16:40.331Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 52,
+                "query": "prompt to graph generation",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=prompt+to+graph+generation&btnG=",
+                "searched_papers": [
+                    53,
+                    54,
+                    56,
+                    57
+                ],
+                "papers_num": 4,
+                "parent": "",
+                "children": [
+                    55,
+                    58
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-23T00:56:15.768Z",
+                "Timestamp_end": "2023-12-10T14:16:23.365Z"
+            }
+        },
+        {
+            "name": 73,
+            "children": [
+                {
+                    "name": 76,
+                    "children": [],
+                    "attributes": {
+                        "id": 76,
+                        "query": "",
+                        "startYear": "",
+                        "endYear": "",
+                        "citedBy": "18054094763407111605",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?cites=18054094763407111605&as_sdt=2005&sciodt=0,5&hl=ko",
+                        "searched_papers": [
+                            77
+                        ],
+                        "papers_num": 1,
+                        "parent": 73,
+                        "children": [],
+                        "link_type": "cited_by",
+                        "seedpaper_id": 75,
+                        "Timestamp": "2023-12-10T14:18:40.750Z",
+                        "Timestamp_end": "2023-12-10T14:19:03.397Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 73,
+                "query": "Knowledge graph algorithm",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=Knowledge+graph+algorithm&btnG=",
+                "searched_papers": [
+                    74,
+                    75
+                ],
+                "papers_num": 2,
+                "parent": "",
+                "children": [
+                    76
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-12-10T14:18:16.884Z",
+                "Timestamp_end": "2023-12-10T14:18:39.027Z"
             }
         }
     ],

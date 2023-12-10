@@ -8,7 +8,6 @@ import TreeReportView from './ReportViewRelated/TreeReportView/TreeReportView';
 import SearchView from './SearchViewRelated/SearchView/SearchView';
 import ForceGraph from './TreeViewRelated/ForceGraph/ForceGraph';
 
-import data from '../data/data.json'
 import AdjMatrix from './ReportViewRelated/AdjMatrix/AdjMatrix';
 import WordCloud from './ReportViewRelated/WordCloud/WordCloud';
 

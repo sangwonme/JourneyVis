@@ -21,10 +21,15 @@ class Paper:
             self.paper_df = pd.read_pickle(self.cachepath)
             print('load paper_df pickle.')
             # TODO : Augment data
-
+            for idx, row in tmp.iterrows():
+                title = row['title']
+                if title not in self.paper_df['title'].values:
+                    self.paper_df.append(row)
         except:
             # add columns
             self.paper_df = tmp
+        
+        import pdb; pdb.set_trace()
             
         # update columns (metadata)
         self.update_all_metadata()
@@ -164,23 +169,27 @@ class Paper:
 
 
     def save_pickle(self):
-        self.paper_df.to_pickle(self.cachepath)
+        if os.path.exists(self.cachepath):
+            self.paper_df.to_pickle(self.cachepath + '_new')
+        else:
+            self.paper_df.to_pickle(self.cachepath)
         print('saved paper_df.')
 
     def update_all_metadata(self):
         # iterate for all rows
-        try:
-            for idx, row in self.paper_df.iterrows():
-                title = row['title']
-                if not row['html']:
-                    res = self.get_paper_metadata(title)
-                    for col in self.attr:
-                        self.paper_df.loc[idx, col] = str(res[col])
-                    print('------------------------')
-                    print('update', title)
-                    print('------------------------')
-        finally:
-            self.save_pickle()
+        
+        for idx, row in self.paper_df.iterrows():
+            title = row['title']
+            if not row['html']:
+                res = self.get_paper_metadata(title)
+                for col in self.attr:
+                    self.paper_df.loc[idx, col] = str(res[col])
+                print('------------------------')
+                print('update', title)
+                print('------------------------')
+        
+        import pdb; pdb.set_trace()
+        self.save_pickle()
 
         return
     

@@ -20,11 +20,13 @@ class DataManager:
         self.paper = Paper(paper_input)
         self.paper_df = self.paper.get_df()
         # create tree DB
+        import pdb; pdb.set_trace()
         self.action = Action(self.data)
         self.action_df = self.compress_df(self.action.get_df()) #compress after retreiving the df
         self.action_df = self.action_df[self.action_df['logtype'] == 'action']
         self.action_df = self.action_df.loc[:, ['id', 'query', 'startYear', 'endYear', 'citedBy', 'authorID', 'url', 'searched_papers', 'papers_num', 'parent', 'children', 'link_type', 'seedpaper_id', 'Timestamp', 'Timestamp_end']]
         self.action_tree = Tree.makeTree(self.action_df)
+        
         # create Similarity object
         self.sm = Similarity()
         self.sim_mat = self.get_similarity_btw_papers(self.paper_df.index)
@@ -32,9 +34,7 @@ class DataManager:
         self.sim_mat_df = pd.DataFrame(self.sim_mat)
         self.sim_mat_df.columns = self.paper_df['id'].values
         self.sim_mat_df.index = self.paper_df['id'].values
-        import pdb; pdb.set_trace()
         self.sim_mat_df['index'] = self.paper_df['id'].values
-        import pdb; pdb.set_trace()
         # self.sim_mat_df = self.convert_df_format(self.sim_mat, self.paper_df)
         # create Action Graph
         # self.action_graph = Graph.create_action_graph(self.action_df)
@@ -74,8 +74,8 @@ class DataManager:
             # CASE 1) Paper -> identify by its title
             if df.loc[i, 'logtype'] == 'paper':
                 key = df.loc[i, 'title']
-                for k in df.loc[i-1, 'query':'authorID'].values:
-                    key += str(k)
+                # for k in df.loc[i-1, 'query':'authorID'].values:
+                #     key += str(k)
             # CASE 2) Action -> identify by its query/year/citedBy/authorID
             elif df.loc[i, 'logtype'] == 'action':
                 for k in df.loc[i, 'query':'authorID'].values:

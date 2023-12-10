@@ -28,8 +28,8 @@ const stopwords = ["the", "and", "a", "to", "of", "in", "i", "is", "that", "it",
 const WordCloud = ({visPaperID}) => {
   const ref = useRef();
 
-  const width = 280;
-  const height = 280;
+  const width = 260;
+  const height = 260;
 
   Math.random = seedrandom('myrandomseed');
 
