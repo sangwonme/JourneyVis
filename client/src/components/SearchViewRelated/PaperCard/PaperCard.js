@@ -22,10 +22,8 @@ const PaperCard = ({paperID, toggleChange, visPaperID}) => {
   // Remove the square brackets and split the string
   const authorList = replacedStr.slice(1, -1).split("', '");
 
-  console.log(visPaperID)
-
   return (<>
-  <div className={`${styles.paperContainer} ${visPaperID.includes(paperID) ? styles.selected : ''}`} onClick={()=>toggleChange(paperID)}>
+  <div className={`${styles.paperContainer} ${visPaperID.includes(paperID) ? '' : styles.unselected}`} onClick={()=>toggleChange(paperID)}>
     <p className={styles.papertitle}>{title}</p>
     {
       authorList &&

@@ -9,6 +9,13 @@ import os
 
 class Paper:
     def __init__(self, paper_df):
+        # from raw_data paper_df setup
+        tmp = paper_df
+        self.attr = ['author_list', 'abstract', 'venue', 'year', 'domain', 'url', 'citation', 'cite_url', 'html']
+        for col in self.attr:
+            tmp[col] = None
+        
+        # load cache
         self.cachepath ='./cache/paperdf.pkl'
         try:
             self.paper_df = pd.read_pickle(self.cachepath)
@@ -17,10 +24,8 @@ class Paper:
 
         except:
             # add columns
-            self.paper_df = paper_df
-            self.attr = ['author_list', 'abstract', 'venue', 'year', 'domain', 'url', 'citation', 'cite_url', 'html']
-            for col in self.attr:
-                self.paper_df[col] = None
+            self.paper_df = tmp
+            
         # update columns (metadata)
         self.update_all_metadata()
 

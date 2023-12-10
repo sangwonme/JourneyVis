@@ -29,22 +29,23 @@ document.addEventListener('click', function(event) {
 
       console.log(titleText)
       if(titleText != ''){
-        console.log('write!')
-        chrome.storage.local.get({ searchLogs: [] }, function (result) {
-          let searchLogs = result.searchLogs;
+        chrome.storage.local.get('searchLogs', function (result) {
           let searchAction = {
-              logtype: "paper",
-              title: titleText,
-              query: '',
-              yearStart: '',
-              yearEnd: '',
-              citedBy: '',
-              cluster: '',
-              authorID: '',
-              timestamp: new Date().toISOString()
+            logtype: "paper",
+            title: titleText,
+            query: '',
+            yearStart: '',
+            yearEnd: '',
+            citedBy: '',
+            cluster: '',
+            authorID: '',
+            timestamp: new Date().toISOString()
           };
+          console.log(result)
+          let searchLogs = result.searchLogs;
           searchLogs.push(searchAction);
           chrome.storage.local.set({ searchLogs: searchLogs });
+          console.log('write!')
           console.log(searchLogs[length(searchAction)])
         })
       }

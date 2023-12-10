@@ -39,10 +39,6 @@ const Layout = () => {
     }
   }, [selNodeID])
 
-  useEffect(() => {
-    console.log(visPaperID)
-  }, [visPaperID])
-
   return ( <>
   <div className={styles.header}>
     <p className={styles.projecttitle}>JourneyVis</p>
@@ -61,8 +57,14 @@ const Layout = () => {
           setSelNodeID={setSelNodeID}/>
       </div>
       <div className={styles.middown}>
-        <AdjMatrix/>
-        <WordCloud visPaperID={visPaperID}/>
+        <div className={styles.section}>
+          <p className={styles.sectionTitle}>Similarity between papers</p>
+          <AdjMatrix visPaperID={visPaperID}/>
+        </div>
+        <div className={styles.section}>
+          <p className={styles.sectionTitle}>Main keywords</p>
+          <WordCloud visPaperID={visPaperID}/>
+        </div>
       </div>
     </div>
     <div className={styles.right}>

@@ -28,6 +28,7 @@ const SearchView = ({selPaperID, filterPaperID, setFilterPaperID, visPaperID, se
 
   return ( <>
   <h2>Searched Papers</h2>
+  <p className={styles.papernum}>Total {selPaperID.length} papers found</p>
   <SearchPanel
     selPaperID={selPaperID}
     setFilterPaperID={setFilterPaperID}/>

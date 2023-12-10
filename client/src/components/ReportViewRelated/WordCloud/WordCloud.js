@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useMemo, useState } from 'react';
 import * as d3 from 'd3';
 import cloud from 'd3-cloud';
 
@@ -27,8 +27,8 @@ const stopwords = ["the", "and", "a", "to", "of", "in", "i", "is", "that", "it",
 const WordCloud = ({visPaperID}) => {
   const ref = useRef();
 
-  const width = 300;
-  const height = 300;
+  const width = 280;
+  const height = 280;
 
   useEffect(() => {
 

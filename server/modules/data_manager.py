@@ -28,6 +28,14 @@ class DataManager:
         # create Similarity object
         self.sm = Similarity()
         self.sim_mat = self.get_similarity_btw_papers(self.paper_df.index)
+        # convert sim_mat to df
+        self.sim_mat_df = pd.DataFrame(self.sim_mat)
+        self.sim_mat_df.columns = self.paper_df['id'].values
+        self.sim_mat_df.index = self.paper_df['id'].values
+        import pdb; pdb.set_trace()
+        self.sim_mat_df['index'] = self.paper_df['id'].values
+        import pdb; pdb.set_trace()
+        # self.sim_mat_df = self.convert_df_format(self.sim_mat, self.paper_df)
         # create Action Graph
         # self.action_graph = Graph.create_action_graph(self.action_df)
         
@@ -46,6 +54,7 @@ class DataManager:
         JSONConverter.df_to_json(self.action_df.set_index('id'), os.path.join(BASE_URL, 'action_df.json'))
         JSONConverter.dict_to_json(self.action_tree, os.path.join(BASE_URL, 'action_graph.json'))
         JSONConverter.np_to_json(self.sim_mat, os.path.join(BASE_URL, 'sim_mat.json'))
+        JSONConverter.df_to_json(self.sim_mat_df, os.path.join(BASE_URL, 'sim_mat_df.json'), orient='records')
         
     # give id for every papers and actions considering redundant datas
     @staticmethod

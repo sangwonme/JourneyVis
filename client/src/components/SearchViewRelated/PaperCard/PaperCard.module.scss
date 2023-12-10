@@ -46,10 +46,11 @@
 
 
 }
-.selected{
-  background-color: black;
-  color: white;
+.unselected{
+  background-color: white;
+  color: lightgray;
+  border: 1px solid lightgray;
   .papertitle{
-    color: white;
+    color: lightgray;
   }
 }

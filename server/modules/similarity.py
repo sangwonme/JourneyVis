@@ -47,5 +47,5 @@ class Similarity:
                 if i != j:
                     similarity_matrix[i][j] = 1 - cosine(embeddings[i], embeddings[j])
                 else:
-                    similarity_matrix[i][j] = 1
+                    similarity_matrix[i][j] = 0
         return similarity_matrix

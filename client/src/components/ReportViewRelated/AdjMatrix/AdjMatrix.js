@@ -1,22 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-// import data from '../../../data/data.json'
+import sim_mat from '../../../data/sim_mat_df.json'
+import paper_data from '../../../data/paper_df.json'
 
-const categories = ['Category A', 'Category B', 'Category C', 'Category D', 'Category E', 'Category F', 'Category G'];
-
-const data = [
-  { index: 0, 'Category A': 0.10, 'Category B': 0.5, 'Category C': 0.2, 'Category D': 0.3, 'Category E': 0.4, 'Category F': 0.8, 'Category G': 0.6 },
-  { index: 1, 'Category A': 0.3, 'Category B': 0.8, 'Category C': 0.7, 'Category D': 0.5, 'Category E': 0.6, 'Category F': 0.2, 'Category G': 0.1 },
-  { index: 2, 'Category A': 0.6, 'Category B': 0.1, 'Category C': 0.4, 'Category D': 0.7, 'Category E': 0.8, 'Category F': 0.3, 'Category G': 0.2 },
-  { index: 3, 'Category A': 0.2, 'Category B': 0.4, 'Category C': 0.8, 'Category D': 0.6, 'Category E': 0.1, 'Category F': 0.7, 'Category G': 0.5 },
-  { index: 4, 'Category A': 0.1, 'Category B': 0.7, 'Category C': 0.3, 'Category D': 0.2, 'Category E': 0.5, 'Category F': 0.6, 'Category G': 0.4 },
-  { index: 5, 'Category A': 0.7, 'Category B': 0.2, 'Category C': 0.6, 'Category D': 0.1, 'Category E': 0.3, 'Category F': 0.4, 'Category G': 0.8 },
-  { index: 6, 'Category A': 0.4, 'Category B': 0.6, 'Category C': 0.5, 'Category D': 0.8, 'Category E': 0.2, 'Category F': 0.1, 'Category G': 0.7 }
-];
-
-
-const AdjMatrix = () => {
+const AdjMatrix = ({visPaperID}) => {
   const d3Container = useRef(null);
 
   // Assuming a width and height for the SVG
@@ -27,9 +15,22 @@ const AdjMatrix = () => {
   useEffect(() => {
     if (d3Container.current) {
       
+      const categories = visPaperID
+      categories.sort((a, b) => a - b);
+      
+      const filteredData = sim_mat
+        .filter(d => visPaperID.includes(d.index)) // Filter rows based on index
+        .map(row => {
+          // Filter columns for each row
+          return visPaperID.reduce((acc, id) => {
+            acc[id.toString()] = row[id.toString()];
+            return acc;
+          }, { index: row.index });
+        });
+      
       // Band scales for x and y axis
       const x = d3.scaleBand()
-        .domain(data.map(d => d.index))
+        .domain(filteredData.map(d => d.index))
         .rangeRound([0, width])
         .paddingInner(0.05);
 
@@ -40,7 +41,7 @@ const AdjMatrix = () => {
 
       // Color scale for the counts
       const color = d3.scaleSequential(d3.interpolateBlues)
-        .domain([0, d3.max(data, d => d3.max(categories, category => d[category]))]);
+        .domain([0.4, 1]);
 
       const xAxis = g => g
         .attr("transform", `translate(0,${height})`)
@@ -68,7 +69,7 @@ const AdjMatrix = () => {
 
       const rects = svg.append("g")
         .selectAll("g")
-        .data(data)
+        .data(filteredData)
         .enter().append("g")
         .attr("class", (d, i) => `${i} bar`)
         .selectAll("g")
@@ -114,7 +115,7 @@ const AdjMatrix = () => {
         d3Container.current.innerHTML = '';
       }
     };
-  }, []);
+  }, [visPaperID]);
 
   return (
     <div ref={d3Container}></div>

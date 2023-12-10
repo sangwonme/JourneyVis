@@ -8,9 +8,12 @@ class JSONConverter:
             json.dump(npdata_list, f)
 
     @staticmethod
-    def df_to_json(dfdata, filepath):
-        dfdata = dfdata.transpose()
-        dfdata.to_json(filepath, indent=4)
+    def df_to_json(dfdata, filepath, orient=''):
+        if orient:
+            dfdata.to_json(filepath, indent=4, orient=orient)
+        else:
+            dfdata = dfdata.transpose()
+            dfdata.to_json(filepath, indent=4)
 
     @staticmethod
     def dict_to_json(dictdata, filepath):
