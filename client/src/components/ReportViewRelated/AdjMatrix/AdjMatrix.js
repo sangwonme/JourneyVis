@@ -45,7 +45,7 @@ const AdjMatrix = ({visPaperID}) => {
 
       const xAxis = g => g
         .attr("transform", `translate(0,${height})`)
-        .call(d3.axisBottom(x).tickFormat((d, i) => categories[i]))
+        .call(d3.axisBottom(x).tickFormat((d, i) => paper_data[categories[i]].title.slice(0, 7)+'...'))
         .selectAll("text")
         .style("text-anchor", "end") // Adjust the anchor to the end for better alignment
         .attr("dx", "-.8em") // Adjust these values as needed for your layout
@@ -53,7 +53,7 @@ const AdjMatrix = ({visPaperID}) => {
         .attr("transform", "rotate(-45)"); // Rotate the labels by 45 degrees
       
       const yAxis = g => g
-        .call(d3.axisLeft(y).tickFormat((d, i) => categories[i]));
+        .call(d3.axisLeft(y).tickFormat((d, i) => paper_data[categories[i]].title.slice(0, 7)+'...'));
 
 
       const svg = d3.select(d3Container.current)
@@ -86,16 +86,15 @@ const AdjMatrix = ({visPaperID}) => {
         .append("title")
         .text(d => d.count);
 
-      rects.append("text")
-        .attr("id", d => make_id(d))
-        .attr("dy", ".35em")
-        .attr("x", d => x(d.xval) + x.bandwidth() / 2)
-        .attr("y", d => y(d.yval) + y.bandwidth() / 2)
-        .text(d => d.count)
-        .style("font-size", "1rem")
-        .style("opacity", "0")
-        .style("text-anchor", "middle");
-
+      // rects.append("text")
+      //   .attr("id", d => make_id(d))
+      //   .attr("dy", ".35em")
+      //   .attr("x", d => x(d.xval) + x.bandwidth() / 2)
+      //   .attr("y", d => y(d.yval) + y.bandwidth() / 2)
+      //   .text(d => d.count)
+      //   .style("font-size", "1rem")
+      //   .style("opacity", "0")
+      //   .style("text-anchor", "middle");
 
       // Add the x-axis
       svg.append("g")

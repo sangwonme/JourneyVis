@@ -36,7 +36,7 @@ const WordCloud = ({visPaperID}) => {
     let longText = ''
     visPaperID.forEach((id) => {
       longText += paper_data[id].title
-      // longText += paper_data[id].abstract
+      longText += paper_data[id].abstract
     })
 
     const words = getWordFrequencies(longText)
