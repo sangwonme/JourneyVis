@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState} from 'react';
 import styles from './TreeDiagram.module.scss';
 import * as d3 from 'd3';
 
+import paper_data from '../../../data/paper_df.json';
+
 const GROUP_NODE = -99
 
 const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
@@ -9,7 +11,6 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
     const containerRef = useRef(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
     
-
     const colormap = {
       'advanced_search': 'red',
       'cited_by': 'blue',
@@ -94,15 +95,25 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
 
           let sizeScale = d3.scaleLinear()
                             .domain([d3.min(paper_nums), d3.max(paper_nums)])
-                            .range([7, 20]);
+                            .range([7, 16]);
           
           node.append("circle")
               .attr("r", (d) => sizeScale(d.data.attributes.papers_num || 0));
 
               node.append("text")
                   .attr("dx", "0") // Offset the text a bit to the right of the circle
-                  .attr("dy", "3em") // Center the text vertically
+                  .attr("dy", "2.5em") // Center the text vertically
                   .text(function(d) {
+                    // text label of nodes
+                    const link_type = d.data.attributes.link_type
+                    if(link_type == 'same_author'){
+                      return '🧑‍🏫' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
+                    }
+                    else if(link_type == 'cited_by'){
+                      return '💬' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
+                    }else{
+                      return '🔎' + d.data.attributes.query.slice(0, 3) + '...'
+                    }
                       return 'A'+d.data.attributes.id;
                   })
                   .style("font-size", "10px")
@@ -145,7 +156,6 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
                 });
               
               if (JSON.stringify(newSelNodeIDs) !== JSON.stringify(selNodeID)) {
-                console.log(selNodeID)
                 setSelNodeID(newSelNodeIDs);
               }
               
