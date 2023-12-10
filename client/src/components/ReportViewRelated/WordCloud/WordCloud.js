@@ -31,6 +31,8 @@ const WordCloud = ({visPaperID}) => {
   const width = 280;
   const height = 280;
 
+  Math.random = seedrandom('myrandomseed');
+
   useEffect(() => {
 
     let longText = ''
@@ -40,8 +42,6 @@ const WordCloud = ({visPaperID}) => {
     })
 
     const words = getWordFrequencies(longText)
-
-    Math.random = seedrandom('myrandomseed');
 
     const sizeScale = d3.scaleLinear()
       .domain([d3.min(words, w => w.size), d3.max(words, w => w.size)])
@@ -54,7 +54,7 @@ const WordCloud = ({visPaperID}) => {
       .rotate(0)
       .font("Impact")
       .fontSize(d => d.size)
-      .random(Math.random)
+      // .random(Math.random)
       .on("end", draw);
 
     layout.start();

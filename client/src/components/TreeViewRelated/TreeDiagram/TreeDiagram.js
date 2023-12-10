@@ -100,6 +100,7 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
           node.append("circle")
               .attr("r", (d) => sizeScale(d.data.attributes.papers_num || 0));
 
+
               node.append("text")
                   .attr("dx", "0") // Offset the text a bit to the right of the circle
                   .attr("dy", "2.5em") // Center the text vertically
@@ -107,14 +108,13 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
                     // text label of nodes
                     const link_type = d.data.attributes.link_type
                     if(link_type == 'same_author'){
-                      return '🧑‍🏫' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
+                      return '🧑‍🏫\n' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
                     }
                     else if(link_type == 'cited_by'){
-                      return '💬' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
+                      return '💬\n' + paper_data[d.data.attributes.seedpaper_id].title.slice(0, 3) + '...'
                     }else{
-                      return '🔎' + d.data.attributes.query.slice(0, 3) + '...'
+                      return '🔎\n' + d.data.attributes.query.slice(0, 3) + '...'
                     }
-                      return 'A'+d.data.attributes.id;
                   })
                   .style("font-size", "10px")
                   .style("fill", "black")
@@ -155,6 +155,7 @@ const TreeDiagram = ({ data, selNodeID, setSelNodeID }) => {
                   newSelNodeIDs.push(d.data.attributes.id);
                 });
               
+              newSelNodeIDs.sort((a, b) => a - b);
               if (JSON.stringify(newSelNodeIDs) !== JSON.stringify(selNodeID)) {
                 setSelNodeID(newSelNodeIDs);
               }
