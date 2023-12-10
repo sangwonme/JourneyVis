@@ -160,14 +160,10 @@ const TreeDiagram = ({selNodeID, setSelNodeID }) => {
                 });
               
               newSelNodeIDs.sort((a, b) => a - b);
-              if (JSON.stringify(newSelNodeIDs) !== JSON.stringify(selNodeID)) {
+              if (newSelNodeIDs.length !== selNum) {
                 setSelNodeID(newSelNodeIDs);
               }
               
-              const newSelNum = d3.selectAll('.selected').size();
-              if (newSelNum !== selNum) {
-                setSelNum(newSelNum);
-              }
             }
           }
           

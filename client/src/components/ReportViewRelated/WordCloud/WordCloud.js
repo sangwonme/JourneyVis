@@ -31,15 +31,25 @@ const WordCloud = ({visPaperID}) => {
   const width = 260;
   const height = 260;
 
+  const [localVisPaperID, setLocalVisPaperID] = useState([]);
+
   Math.random = seedrandom('myrandomseed');
 
   useEffect(() => {
+
+    if (JSON.stringify(localVisPaperID) === JSON.stringify(visPaperID)){
+      return;
+    }
+
+    setLocalVisPaperID(visPaperID)
+    console.log('updated')
 
     let longText = ''
     visPaperID.forEach((id) => {
       longText += paper_data[id].title
       longText += paper_data[id].abstract
     })
+    // console.log('longtext')
 
     const words = getWordFrequencies(longText)
 
@@ -54,7 +64,6 @@ const WordCloud = ({visPaperID}) => {
       .rotate(0)
       .font("Impact")
       .fontSize(d => d.size)
-      // .random(Math.random)
       .on("end", draw);
 
     layout.start();
@@ -79,7 +88,7 @@ const WordCloud = ({visPaperID}) => {
         .attr("transform", d => `translate(${[d.x, d.y]})rotate(${d.rotate})`)
         .text(d => d.text);
     }
-  }, [visPaperID]); 
+  }, [visPaperID, localVisPaperID]); 
 
   return <svg ref={ref} />;
 }

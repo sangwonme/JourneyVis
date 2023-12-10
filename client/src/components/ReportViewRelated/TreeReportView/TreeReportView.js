@@ -35,8 +35,11 @@ const PaperDescription = ({paperID}) => {
     <div className={styles.metadata}>
       <div className={styles.nonlink}>
         {/* <p className={styles.venue}>{venue}</p> */}
-        <p className={styles.year}>{year}</p>
-        <p className={styles.citation}>{citation}</p>
+        {
+          year > 0 &&
+          <p className={styles.year}>{year}</p>
+        }
+        <p className={styles.citation}>💬 {citation}</p>
       </div>
       <a className={styles.url} href={url} target='_blank'>⛓️</a>
     </div>
@@ -100,6 +103,7 @@ const NodeDescription = ({nodeID}) => {
       {toggle && searched_papers.map(id => <PaperDescription paperID={id} />)}
     </div>
     }
+    <a className={styles.actionUrl} href={action.url} target='_blank'>Explore more with this search action.</a>
   </div>
   </>);
 }
