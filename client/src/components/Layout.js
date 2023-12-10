@@ -56,14 +56,21 @@ const Layout = () => {
           setSelNodeID={setSelNodeID}/>
       </div>
       <div className={styles.middown}>
-        <div className={styles.section}>
-          <p className={styles.sectionTitle}>Similarity between papers</p>
-          <AdjMatrix visPaperID={visPaperID}/>
-        </div>
-        <div className={styles.section}>
-          <p className={styles.sectionTitle}>Main keywords</p>
-          <WordCloud visPaperID={visPaperID}/>
-        </div>
+        {
+          visPaperID.length > 0 ? 
+          <>
+          <div className={styles.section}>
+            <p className={styles.sectionTitle}>Similarity between papers</p>
+            <AdjMatrix visPaperID={visPaperID}/>
+          </div>
+          <div className={styles.section}>
+            <p className={styles.sectionTitle}>Main keywords</p>
+            <WordCloud visPaperID={visPaperID}/>
+          </div>
+          </>
+          :
+          <p className={styles.noSelection}>There is no paper founded in current search actions.</p>
+        }
       </div>
     </div>
     <div className={styles.right}>
