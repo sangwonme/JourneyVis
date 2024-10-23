@@ -1,0 +1,1007 @@
+{
+    "name": -99,
+    "children": [
+        {
+            "name": 0,
+            "children": [
+                {
+                    "name": 2,
+                    "children": [],
+                    "attributes": {
+                        "id": 2,
+                        "query": "",
+                        "startYear": "",
+                        "endYear": "",
+                        "citedBy": "6864630954541468524",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?cites=6864630954541468524&as_sdt=2005&sciodt=0,5&hl=ko",
+                        "searched_papers": [
+                            3
+                        ],
+                        "papers_num": 1,
+                        "parent": 0,
+                        "children": [],
+                        "link_type": "cited_by",
+                        "seedpaper_id": 1,
+                        "Timestamp": "2023-11-19T05:46:43.763Z",
+                        "Timestamp_end": "2023-11-19T05:46:53.141Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 0,
+                "query": "early intervention",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=early+intervention&oq=",
+                "searched_papers": [
+                    1,
+                    4,
+                    5,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48
+                ],
+                "papers_num": 9,
+                "parent": "",
+                "children": [
+                    2
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-19T05:46:27.589Z",
+                "Timestamp_end": "2023-11-19T06:37:46.974Z"
+            }
+        },
+        {
+            "name": 6,
+            "children": [
+                {
+                    "name": 9,
+                    "children": [
+                        {
+                            "name": 11,
+                            "children": [],
+                            "attributes": {
+                                "id": 11,
+                                "query": "",
+                                "startYear": "",
+                                "endYear": "",
+                                "citedBy": "9724932194597403639",
+                                "authorID": "",
+                                "url": "https://scholar.google.co.kr/scholar?cites=9724932194597403639&as_sdt=2005&sciodt=0,5&hl=ko",
+                                "searched_papers": [
+                                    12
+                                ],
+                                "papers_num": 1,
+                                "parent": 9,
+                                "children": [],
+                                "link_type": "cited_by",
+                                "seedpaper_id": 10,
+                                "Timestamp": "2023-11-19T05:54:54.826Z",
+                                "Timestamp_end": "2023-11-19T05:54:54.826Z"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "id": 9,
+                        "query": "",
+                        "startYear": "",
+                        "endYear": "",
+                        "citedBy": "17079930752446188308",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?cites=17079930752446188308&as_sdt=2005&sciodt=0,5&hl=ko",
+                        "searched_papers": [
+                            10
+                        ],
+                        "papers_num": 1,
+                        "parent": 6,
+                        "children": [
+                            11
+                        ],
+                        "link_type": "cited_by",
+                        "seedpaper_id": 8,
+                        "Timestamp": "2023-11-19T05:54:49.933Z",
+                        "Timestamp_end": "2023-11-19T05:54:49.933Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 6,
+                "query": "early intervention language learning",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=early+intervention+language+learning&btnG=&oq=early+intervention",
+                "searched_papers": [
+                    7,
+                    8
+                ],
+                "papers_num": 2,
+                "parent": "",
+                "children": [
+                    9
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-19T05:49:34.763Z",
+                "Timestamp_end": "2023-11-19T05:54:45.771Z"
+            }
+        },
+        {
+            "name": 13,
+            "children": [
+                {
+                    "name": 15,
+                    "children": [],
+                    "attributes": {
+                        "id": 15,
+                        "query": "",
+                        "startYear": "",
+                        "endYear": "",
+                        "citedBy": "5321848940423579623",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?cites=5321848940423579623&as_sdt=2005&sciodt=0,5&hl=ko",
+                        "searched_papers": [],
+                        "papers_num": 0,
+                        "parent": 13,
+                        "children": [],
+                        "link_type": "cited_by",
+                        "seedpaper_id": 14,
+                        "Timestamp": "2023-11-19T05:55:40.491Z",
+                        "Timestamp_end": "2023-11-19T05:55:40.491Z"
+                    }
+                },
+                {
+                    "name": 16,
+                    "children": [
+                        {
+                            "name": 17,
+                            "children": [
+                                {
+                                    "name": 18,
+                                    "children": [
+                                        {
+                                            "name": 19,
+                                            "children": [
+                                                {
+                                                    "name": 21,
+                                                    "children": [],
+                                                    "attributes": {
+                                                        "id": 21,
+                                                        "query": "",
+                                                        "startYear": "",
+                                                        "endYear": "",
+                                                        "citedBy": "17752285616737220261",
+                                                        "authorID": "",
+                                                        "url": "https://scholar.google.co.kr/scholar?cites=17752285616737220261&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                        "searched_papers": [],
+                                                        "papers_num": 0,
+                                                        "parent": 19,
+                                                        "children": [],
+                                                        "link_type": "cited_by",
+                                                        "seedpaper_id": 20,
+                                                        "Timestamp": "2023-11-19T05:57:26.983Z",
+                                                        "Timestamp_end": "2023-11-19T05:57:26.983Z"
+                                                    }
+                                                },
+                                                {
+                                                    "name": 22,
+                                                    "children": [],
+                                                    "attributes": {
+                                                        "id": 22,
+                                                        "query": "",
+                                                        "startYear": "",
+                                                        "endYear": "",
+                                                        "citedBy": "",
+                                                        "authorID": "OkngbkkAAAAJ",
+                                                        "url": "https://scholar.google.co.kr/citations?user=OkngbkkAAAAJ&hl=ko&oi=sra",
+                                                        "searched_papers": [],
+                                                        "papers_num": 0,
+                                                        "parent": 19,
+                                                        "children": [],
+                                                        "link_type": "same_author",
+                                                        "seedpaper_id": 20,
+                                                        "Timestamp": "2023-11-19T05:57:31.140Z",
+                                                        "Timestamp_end": "2023-11-19T05:57:31.140Z"
+                                                    }
+                                                },
+                                                {
+                                                    "name": 23,
+                                                    "children": [
+                                                        {
+                                                            "name": 27,
+                                                            "children": [
+                                                                {
+                                                                    "name": 28,
+                                                                    "children": [
+                                                                        {
+                                                                            "name": 33,
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": 35,
+                                                                                    "children": [],
+                                                                                    "attributes": {
+                                                                                        "id": 35,
+                                                                                        "query": "",
+                                                                                        "startYear": "",
+                                                                                        "endYear": "",
+                                                                                        "citedBy": "2087910909039998794",
+                                                                                        "authorID": "",
+                                                                                        "url": "https://scholar.google.co.kr/scholar?cites=2087910909039998794&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                                                        "searched_papers": [
+                                                                                            36,
+                                                                                            37
+                                                                                        ],
+                                                                                        "papers_num": 2,
+                                                                                        "parent": 33,
+                                                                                        "children": [],
+                                                                                        "link_type": "cited_by",
+                                                                                        "seedpaper_id": 34,
+                                                                                        "Timestamp": "2023-11-19T05:59:07.859Z",
+                                                                                        "Timestamp_end": "2023-11-20T13:41:54.205Z"
+                                                                                    }
+                                                                                }
+                                                                            ],
+                                                                            "attributes": {
+                                                                                "id": 33,
+                                                                                "query": "korean",
+                                                                                "startYear": "",
+                                                                                "endYear": "",
+                                                                                "citedBy": "14002861277903846410",
+                                                                                "authorID": "",
+                                                                                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=14002861277903846410&scipsc=1&q=korean&btnG=",
+                                                                                "searched_papers": [
+                                                                                    34
+                                                                                ],
+                                                                                "papers_num": 1,
+                                                                                "parent": 28,
+                                                                                "children": [
+                                                                                    35
+                                                                                ],
+                                                                                "link_type": "advanced_search",
+                                                                                "seedpaper_id": "",
+                                                                                "Timestamp": "2023-11-19T05:58:58.879Z",
+                                                                                "Timestamp_end": "2023-11-19T05:59:05.747Z"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "attributes": {
+                                                                        "id": 28,
+                                                                        "query": "child",
+                                                                        "startYear": "",
+                                                                        "endYear": "",
+                                                                        "citedBy": "14002861277903846410",
+                                                                        "authorID": "",
+                                                                        "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=14002861277903846410&scipsc=1&q=child&btnG=",
+                                                                        "searched_papers": [
+                                                                            29,
+                                                                            30,
+                                                                            31,
+                                                                            32
+                                                                        ],
+                                                                        "papers_num": 4,
+                                                                        "parent": 27,
+                                                                        "children": [
+                                                                            33
+                                                                        ],
+                                                                        "link_type": "advanced_search",
+                                                                        "seedpaper_id": "",
+                                                                        "Timestamp": "2023-11-19T05:58:04.049Z",
+                                                                        "Timestamp_end": "2023-11-19T05:58:56.250Z"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "attributes": {
+                                                                "id": 27,
+                                                                "query": "",
+                                                                "startYear": "",
+                                                                "endYear": "",
+                                                                "citedBy": "14002861277903846410",
+                                                                "authorID": "",
+                                                                "url": "https://scholar.google.co.kr/scholar?oi=bibs&hl=ko&cites=14002861277903846410",
+                                                                "searched_papers": [],
+                                                                "papers_num": 0,
+                                                                "parent": 23,
+                                                                "children": [
+                                                                    28
+                                                                ],
+                                                                "link_type": "cited_by",
+                                                                "seedpaper_id": 26,
+                                                                "Timestamp": "2023-11-19T05:57:55.477Z",
+                                                                "Timestamp_end": "2023-11-19T05:57:55.477Z"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "attributes": {
+                                                        "id": 23,
+                                                        "query": "",
+                                                        "startYear": "",
+                                                        "endYear": "",
+                                                        "citedBy": "",
+                                                        "authorID": "EilVnKwAAAAJ",
+                                                        "url": "https://scholar.google.co.kr/citations?user=EilVnKwAAAAJ&hl=ko&oi=sra",
+                                                        "searched_papers": [
+                                                            24,
+                                                            25,
+                                                            26
+                                                        ],
+                                                        "papers_num": 3,
+                                                        "parent": 19,
+                                                        "children": [
+                                                            27
+                                                        ],
+                                                        "link_type": "same_author",
+                                                        "seedpaper_id": 20,
+                                                        "Timestamp": "2023-11-19T05:57:38.089Z",
+                                                        "Timestamp_end": "2023-11-20T13:51:47.866Z"
+                                                    }
+                                                }
+                                            ],
+                                            "attributes": {
+                                                "id": 19,
+                                                "query": "automatic speech recognition",
+                                                "startYear": "2022",
+                                                "endYear": "",
+                                                "citedBy": "",
+                                                "authorID": "",
+                                                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2022&q=automatic+speech+recognition&btnG=&oq=automatic+sp",
+                                                "searched_papers": [
+                                                    20
+                                                ],
+                                                "papers_num": 1,
+                                                "parent": 18,
+                                                "children": [
+                                                    21,
+                                                    22,
+                                                    23
+                                                ],
+                                                "link_type": "advanced_search",
+                                                "seedpaper_id": "",
+                                                "Timestamp": "2023-11-19T05:57:16.989Z",
+                                                "Timestamp_end": "2023-11-19T05:57:35.574Z"
+                                            }
+                                        }
+                                    ],
+                                    "attributes": {
+                                        "id": 18,
+                                        "query": "ASR",
+                                        "startYear": "2022",
+                                        "endYear": "",
+                                        "citedBy": "",
+                                        "authorID": "",
+                                        "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=ASR&hl=ko&as_sdt=0,5",
+                                        "searched_papers": [],
+                                        "papers_num": 0,
+                                        "parent": 17,
+                                        "children": [
+                                            19
+                                        ],
+                                        "link_type": "advanced_search",
+                                        "seedpaper_id": "",
+                                        "Timestamp": "2023-11-19T05:57:10.460Z",
+                                        "Timestamp_end": "2023-11-19T05:57:10.460Z"
+                                    }
+                                }
+                            ],
+                            "attributes": {
+                                "id": 17,
+                                "query": "ASR",
+                                "startYear": "2019",
+                                "endYear": "",
+                                "citedBy": "",
+                                "authorID": "",
+                                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2019&q=ASR&btnG=",
+                                "searched_papers": [],
+                                "papers_num": 0,
+                                "parent": 16,
+                                "children": [
+                                    18
+                                ],
+                                "link_type": "advanced_search",
+                                "seedpaper_id": "",
+                                "Timestamp": "2023-11-19T05:57:03.936Z",
+                                "Timestamp_end": "2023-11-19T05:57:03.936Z"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "id": 16,
+                        "query": "speech recognition",
+                        "startYear": "2019",
+                        "endYear": "",
+                        "citedBy": "",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?as_ylo=2019&q=speech+recognition&hl=ko&as_sdt=0,5",
+                        "searched_papers": [],
+                        "papers_num": 0,
+                        "parent": 13,
+                        "children": [
+                            17
+                        ],
+                        "link_type": "advanced_search",
+                        "seedpaper_id": "",
+                        "Timestamp": "2023-11-19T05:56:54.607Z",
+                        "Timestamp_end": "2023-11-19T05:56:54.607Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 13,
+                "query": "speech recognition",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=speech+recognition&btnG=",
+                "searched_papers": [
+                    14
+                ],
+                "papers_num": 1,
+                "parent": "",
+                "children": [
+                    15,
+                    16
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-19T05:55:23.330Z",
+                "Timestamp_end": "2023-11-20T13:47:21.632Z"
+            }
+        },
+        {
+            "name": 38,
+            "children": [
+                {
+                    "name": 40,
+                    "children": [
+                        {
+                            "name": 41,
+                            "children": [],
+                            "attributes": {
+                                "id": 41,
+                                "query": "",
+                                "startYear": "2022",
+                                "endYear": "",
+                                "citedBy": "3097734008368961616",
+                                "authorID": "",
+                                "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&hl=ko&as_sdt=2005&sciodt=0,5&cites=3097734008368961616&scipsc=",
+                                "searched_papers": [
+                                    42
+                                ],
+                                "papers_num": 1,
+                                "parent": 40,
+                                "children": [],
+                                "link_type": "advanced_search",
+                                "seedpaper_id": "",
+                                "Timestamp": "2023-11-19T05:59:43.828Z",
+                                "Timestamp_end": "2023-11-20T13:47:52.069Z"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "id": 40,
+                        "query": "",
+                        "startYear": "",
+                        "endYear": "",
+                        "citedBy": "3097734008368961616",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?cites=3097734008368961616&as_sdt=2005&sciodt=0,5&hl=ko",
+                        "searched_papers": [],
+                        "papers_num": 0,
+                        "parent": 38,
+                        "children": [
+                            41
+                        ],
+                        "link_type": "cited_by",
+                        "seedpaper_id": 39,
+                        "Timestamp": "2023-11-19T05:59:41.253Z",
+                        "Timestamp_end": "2023-11-19T05:59:41.253Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 38,
+                "query": "video understanding multimodal",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=video+understanding+multimodal&oq=",
+                "searched_papers": [
+                    39
+                ],
+                "papers_num": 1,
+                "parent": "",
+                "children": [
+                    40
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-19T05:59:35.191Z",
+                "Timestamp_end": "2023-11-19T05:59:39.506Z"
+            }
+        },
+        {
+            "name": 49,
+            "children": [],
+            "attributes": {
+                "id": 49,
+                "query": "Relationship between language development and watching tv among infants and toddlers.",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=Relationship+between+language+development+and+watching+tv+among+infants+and+toddlers.&btnG=",
+                "searched_papers": [
+                    50,
+                    51
+                ],
+                "papers_num": 2,
+                "parent": "",
+                "children": [],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-21T04:27:14.974Z",
+                "Timestamp_end": "2023-11-21T04:27:14.974Z"
+            }
+        },
+        {
+            "name": 52,
+            "children": [
+                {
+                    "name": 58,
+                    "children": [
+                        {
+                            "name": 60,
+                            "children": [
+                                {
+                                    "name": 62,
+                                    "children": [],
+                                    "attributes": {
+                                        "id": 62,
+                                        "query": "",
+                                        "startYear": "",
+                                        "endYear": "",
+                                        "citedBy": "9345696559280297687",
+                                        "authorID": "",
+                                        "url": "https://scholar.google.co.kr/scholar?cites=9345696559280297687&as_sdt=2005&sciodt=0,5&hl=ko",
+                                        "searched_papers": [],
+                                        "papers_num": 0,
+                                        "parent": 60,
+                                        "children": [],
+                                        "link_type": "cited_by",
+                                        "seedpaper_id": 61,
+                                        "Timestamp": "2023-12-10T14:16:51.821Z",
+                                        "Timestamp_end": "2023-12-10T14:16:51.821Z"
+                                    }
+                                },
+                                {
+                                    "name": 63,
+                                    "children": [
+                                        {
+                                            "name": 65,
+                                            "children": [],
+                                            "attributes": {
+                                                "id": 65,
+                                                "query": "",
+                                                "startYear": "",
+                                                "endYear": "",
+                                                "citedBy": "7230362880510128041",
+                                                "authorID": "",
+                                                "url": "https://scholar.google.co.kr/scholar?cites=7230362880510128041&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                "searched_papers": [
+                                                    66,
+                                                    67
+                                                ],
+                                                "papers_num": 2,
+                                                "parent": 63,
+                                                "children": [],
+                                                "link_type": "cited_by",
+                                                "seedpaper_id": 64,
+                                                "Timestamp": "2023-12-10T14:17:16.331Z",
+                                                "Timestamp_end": "2023-12-10T14:17:30.333Z"
+                                            }
+                                        },
+                                        {
+                                            "name": 69,
+                                            "children": [
+                                                {
+                                                    "name": 72,
+                                                    "children": [],
+                                                    "attributes": {
+                                                        "id": 72,
+                                                        "query": "",
+                                                        "startYear": "",
+                                                        "endYear": "",
+                                                        "citedBy": "16663225795066109593",
+                                                        "authorID": "",
+                                                        "url": "https://scholar.google.co.kr/scholar?cites=16663225795066109593&as_sdt=2005&sciodt=0,5&hl=ko",
+                                                        "searched_papers": [],
+                                                        "papers_num": 0,
+                                                        "parent": 69,
+                                                        "children": [],
+                                                        "link_type": "cited_by",
+                                                        "seedpaper_id": 71,
+                                                        "Timestamp": "2023-12-10T14:18:01.777Z",
+                                                        "Timestamp_end": "2023-12-10T14:18:01.777Z"
+                                                    }
+                                                }
+                                            ],
+                                            "attributes": {
+                                                "id": 69,
+                                                "query": "graph construction",
+                                                "startYear": "2022",
+                                                "endYear": "",
+                                                "citedBy": "",
+                                                "authorID": "",
+                                                "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=graph+construction&hl=ko&as_sdt=0,5",
+                                                "searched_papers": [
+                                                    70,
+                                                    71
+                                                ],
+                                                "papers_num": 2,
+                                                "parent": 63,
+                                                "children": [
+                                                    72
+                                                ],
+                                                "link_type": "advanced_search",
+                                                "seedpaper_id": "",
+                                                "Timestamp": "2023-12-10T14:17:39.354Z",
+                                                "Timestamp_end": "2023-12-10T14:18:00.064Z"
+                                            }
+                                        }
+                                    ],
+                                    "attributes": {
+                                        "id": 63,
+                                        "query": "graph construction",
+                                        "startYear": "",
+                                        "endYear": "",
+                                        "citedBy": "5856182221416152353",
+                                        "authorID": "",
+                                        "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=2005&sciodt=0%2C5&cites=5856182221416152353&scipsc=&q=graph+construction&btnG=",
+                                        "searched_papers": [
+                                            64,
+                                            68
+                                        ],
+                                        "papers_num": 2,
+                                        "parent": 60,
+                                        "children": [
+                                            65,
+                                            69
+                                        ],
+                                        "link_type": "advanced_search",
+                                        "seedpaper_id": "",
+                                        "Timestamp": "2023-12-10T14:17:07.597Z",
+                                        "Timestamp_end": "2023-12-10T14:17:37.145Z"
+                                    }
+                                }
+                            ],
+                            "attributes": {
+                                "id": 60,
+                                "query": "",
+                                "startYear": "",
+                                "endYear": "",
+                                "citedBy": "5856182221416152353",
+                                "authorID": "",
+                                "url": "https://scholar.google.co.kr/scholar?cites=5856182221416152353&as_sdt=2005&sciodt=0,5&hl=ko",
+                                "searched_papers": [
+                                    61
+                                ],
+                                "papers_num": 1,
+                                "parent": 58,
+                                "children": [
+                                    62,
+                                    63
+                                ],
+                                "link_type": "cited_by",
+                                "seedpaper_id": 59,
+                                "Timestamp": "2023-12-10T14:16:41.700Z",
+                                "Timestamp_end": "2023-12-10T14:16:54.740Z"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "id": 58,
+                        "query": "prompt to graph generation",
+                        "startYear": "2022",
+                        "endYear": "",
+                        "citedBy": "",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=prompt+to+graph+generation&hl=ko&as_sdt=0,5",
+                        "searched_papers": [
+                            59
+                        ],
+                        "papers_num": 1,
+                        "parent": 52,
+                        "children": [
+                            60
+                        ],
+                        "link_type": "advanced_search",
+                        "seedpaper_id": "",
+                        "Timestamp": "2023-12-10T14:16:26.465Z",
+                        "Timestamp_end": "2023-12-10T14:16:40.331Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 52,
+                "query": "prompt to graph generation",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=prompt+to+graph+generation&btnG=",
+                "searched_papers": [
+                    53,
+                    54,
+                    56,
+                    57
+                ],
+                "papers_num": 4,
+                "parent": "",
+                "children": [
+                    55,
+                    58
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-11-23T00:56:15.768Z",
+                "Timestamp_end": "2023-12-10T14:16:23.365Z"
+            }
+        },
+        {
+            "name": 73,
+            "children": [
+                {
+                    "name": 76,
+                    "children": [],
+                    "attributes": {
+                        "id": 76,
+                        "query": "",
+                        "startYear": "",
+                        "endYear": "",
+                        "citedBy": "18054094763407111605",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?cites=18054094763407111605&as_sdt=2005&sciodt=0,5&hl=ko",
+                        "searched_papers": [
+                            77
+                        ],
+                        "papers_num": 1,
+                        "parent": 73,
+                        "children": [],
+                        "link_type": "cited_by",
+                        "seedpaper_id": 75,
+                        "Timestamp": "2023-12-10T14:18:40.750Z",
+                        "Timestamp_end": "2023-12-10T14:19:03.397Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 73,
+                "query": "Knowledge graph algorithm",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=Knowledge+graph+algorithm&btnG=",
+                "searched_papers": [
+                    74,
+                    75
+                ],
+                "papers_num": 2,
+                "parent": "",
+                "children": [
+                    76
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-12-10T14:18:16.884Z",
+                "Timestamp_end": "2023-12-10T14:18:39.027Z"
+            }
+        },
+        {
+            "name": 78,
+            "children": [
+                {
+                    "name": 79,
+                    "children": [
+                        {
+                            "name": 85,
+                            "children": [
+                                {
+                                    "name": 88,
+                                    "children": [],
+                                    "attributes": {
+                                        "id": 88,
+                                        "query": "",
+                                        "startYear": "",
+                                        "endYear": "",
+                                        "citedBy": "476678889960394760",
+                                        "authorID": "",
+                                        "url": "https://scholar.google.co.kr/scholar?cites=476678889960394760&as_sdt=2005&sciodt=0,5&hl=ko",
+                                        "searched_papers": [
+                                            89,
+                                            90,
+                                            91
+                                        ],
+                                        "papers_num": 3,
+                                        "parent": 85,
+                                        "children": [],
+                                        "link_type": "cited_by",
+                                        "seedpaper_id": 86,
+                                        "Timestamp": "2023-12-10T15:19:00.346Z",
+                                        "Timestamp_end": "2023-12-10T15:19:11.515Z"
+                                    }
+                                },
+                                {
+                                    "name": 92,
+                                    "children": [],
+                                    "attributes": {
+                                        "id": 92,
+                                        "query": "",
+                                        "startYear": "",
+                                        "endYear": "",
+                                        "citedBy": "",
+                                        "authorID": "yOvhwa8AAAAJ",
+                                        "url": "https://scholar.google.co.kr/citations?user=yOvhwa8AAAAJ&hl=ko&oi=sra",
+                                        "searched_papers": [],
+                                        "papers_num": 0,
+                                        "parent": 85,
+                                        "children": [],
+                                        "link_type": "same_author",
+                                        "seedpaper_id": 86,
+                                        "Timestamp": "2023-12-10T15:19:15.470Z",
+                                        "Timestamp_end": "2023-12-10T15:19:15.470Z"
+                                    }
+                                }
+                            ],
+                            "attributes": {
+                                "id": 85,
+                                "query": "",
+                                "startYear": "",
+                                "endYear": "",
+                                "citedBy": "16091082704296319716",
+                                "authorID": "",
+                                "url": "https://scholar.google.co.kr/scholar?cites=16091082704296319716&as_sdt=2005&sciodt=0,5&hl=ko",
+                                "searched_papers": [
+                                    86,
+                                    87
+                                ],
+                                "papers_num": 2,
+                                "parent": 79,
+                                "children": [
+                                    88,
+                                    92
+                                ],
+                                "link_type": "cited_by",
+                                "seedpaper_id": 84,
+                                "Timestamp": "2023-12-10T15:18:47.405Z",
+                                "Timestamp_end": "2023-12-10T15:19:19.586Z"
+                            }
+                        },
+                        {
+                            "name": 94,
+                            "children": [
+                                {
+                                    "name": 96,
+                                    "children": [],
+                                    "attributes": {
+                                        "id": 96,
+                                        "query": "",
+                                        "startYear": "",
+                                        "endYear": "",
+                                        "citedBy": "",
+                                        "authorID": "Ar8R4FIAAAAJ",
+                                        "url": "https://scholar.google.co.kr/citations?user=Ar8R4FIAAAAJ&hl=ko&oi=sra",
+                                        "searched_papers": [
+                                            97,
+                                            98
+                                        ],
+                                        "papers_num": 2,
+                                        "parent": 94,
+                                        "children": [],
+                                        "link_type": "same_author",
+                                        "seedpaper_id": 95,
+                                        "Timestamp": "2023-12-10T15:20:04.937Z",
+                                        "Timestamp_end": "2023-12-10T15:20:16.754Z"
+                                    }
+                                }
+                            ],
+                            "attributes": {
+                                "id": 94,
+                                "query": "Fairytale qa",
+                                "startYear": "2022",
+                                "endYear": "",
+                                "citedBy": "",
+                                "authorID": "",
+                                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&as_ylo=2022&q=Fairytale+qa&btnG=",
+                                "searched_papers": [
+                                    95
+                                ],
+                                "papers_num": 1,
+                                "parent": 79,
+                                "children": [
+                                    96
+                                ],
+                                "link_type": "advanced_search",
+                                "seedpaper_id": "",
+                                "Timestamp": "2023-12-10T15:19:58.636Z",
+                                "Timestamp_end": "2023-12-10T15:20:02.352Z"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "id": 79,
+                        "query": "qa generation",
+                        "startYear": "2022",
+                        "endYear": "",
+                        "citedBy": "",
+                        "authorID": "",
+                        "url": "https://scholar.google.co.kr/scholar?as_ylo=2022&q=qa+generation&hl=ko&as_sdt=0,5",
+                        "searched_papers": [
+                            80,
+                            81,
+                            82,
+                            83,
+                            84,
+                            93
+                        ],
+                        "papers_num": 6,
+                        "parent": 78,
+                        "children": [
+                            85,
+                            94
+                        ],
+                        "link_type": "advanced_search",
+                        "seedpaper_id": "",
+                        "Timestamp": "2023-12-10T15:18:25.199Z",
+                        "Timestamp_end": "2023-12-10T15:19:41.652Z"
+                    }
+                }
+            ],
+            "attributes": {
+                "id": 78,
+                "query": "qa generation",
+                "startYear": "",
+                "endYear": "",
+                "citedBy": "",
+                "authorID": "",
+                "url": "https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=qa+generation&btnG=",
+                "searched_papers": [],
+                "papers_num": 0,
+                "parent": "",
+                "children": [
+                    79
+                ],
+                "link_type": "",
+                "seedpaper_id": "",
+                "Timestamp": "2023-12-10T15:18:21.333Z",
+                "Timestamp_end": "2023-12-10T15:18:21.333Z"
+            }
+        }
+    ],
+    "attributes": {
+        "id": "-1",
+        "query": "",
+        "startYear": "",
+        "endYear": "",
+        "citedBy": "",
+        "authorID": "",
+        "url": "",
+        "searched_papers": [],
+        "papers_num": 0,
+        "parent": 0,
+        "children": [],
+        "link_type": "",
+        "seedpaper_id": "",
+        "Timestamp": "",
+        "Timestamp_end": ""
+    }
+}

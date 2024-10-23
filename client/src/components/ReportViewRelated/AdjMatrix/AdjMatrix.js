@@ -41,7 +41,7 @@ const AdjMatrix = ({visPaperID}) => {
 
       // Color scale for the counts
       const color = d3.scaleSequential(d3.interpolateBlues)
-        .domain([0.4, 1]);
+        .domain([0.6, 1]);
 
       const xAxis = g => g
         .attr("transform", `translate(0,${height})`)
